@@ -2,8 +2,12 @@
 import MenuDesktop from "./components/MenuDesktop";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Header from "./components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "700"],
+});
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -17,8 +21,8 @@ export default function RootLayout({
 }) {
   const weather: string = "sunny-day";
   const backgroundWeatherGradients: string[] = [
+    "linear-gradient(180deg, rgba(196, 208, 232, 0.6) 0%, rgba(232, 218, 205, 0.6) 100%)",
     "bg-gradient-to-b from-sunny-day-blue to-sunny-day-red bg-no-repeat",
-    "bg-black",
   ];
   let background = "";
   if (weather === "sunny-day") {
@@ -26,9 +30,24 @@ export default function RootLayout({
   }
   return (
     <html lang="en">
-      <body className={background}>
-        <MenuDesktop />
-        <main>{children}</main>
+      <body
+        className={inter.className}
+        style={{
+          height: "100vh",
+        }}
+      >
+        <div
+          style={{
+            borderRadius: "12px",
+            border: "white solid 6px",
+            background: background,
+            height: "100vh",
+          }}
+        >
+          <Header />
+          <main>{children}</main>
+          <MenuDesktop />
+        </div>
       </body>
     </html>
   );
