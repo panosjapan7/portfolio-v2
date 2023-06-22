@@ -21,8 +21,8 @@ export default function RootLayout({
 }) {
   const weather: string = "sunny-day";
   const backgroundWeatherGradients: string[] = [
+    "linear-gradient(180deg, rgba(196, 208, 232, 0.6) 0%, rgba(232, 218, 205, 0.6) 100%)",
     "bg-gradient-to-b from-sunny-day-blue to-sunny-day-red bg-no-repeat",
-    "bg-black",
   ];
   let background = "";
   if (weather === "sunny-day") {
@@ -30,8 +30,20 @@ export default function RootLayout({
   }
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className={background} style={{ height: "100vh" }}>
+      <body
+        className={inter.className}
+        style={{
+          height: "100vh",
+        }}
+      >
+        <div
+          style={{
+            borderRadius: "12px",
+            border: "white solid 6px",
+            background: background,
+            height: "100vh",
+          }}
+        >
           <Header />
           <main>{children}</main>
           <MenuDesktop />
