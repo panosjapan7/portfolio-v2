@@ -84,7 +84,7 @@ function AppIcon({
         <div
           style={{
             borderRadius: "50%",
-            border: active ? "2px solid #d1d1d1" : "none",
+            border: active ? "2px solid #b8b7b7" : "none",
             padding: 14,
           }}
         >
