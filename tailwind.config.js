@@ -15,10 +15,6 @@ module.exports = {
       colors: {
         "sunny-day-blue": "#D7DEEC",
         "sunny-day-red": "#F1EBEB",
-        // FF0000
-        // #F1EBEB
-        // , rgba(241, 235, 235, 0.6) 100%)",
-        // koft: "rgba",
       },
       border: {
         "sunny-day-border": "6px solid #FFFFFF",
