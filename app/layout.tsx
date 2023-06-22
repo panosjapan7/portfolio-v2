@@ -4,7 +4,10 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "./components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "700"],
+});
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -27,10 +30,12 @@ export default function RootLayout({
   }
   return (
     <html lang="en">
-      <body className={background}>
-        <Header />
-        <main>{children}</main>
-        <MenuDesktop />
+      <body className={inter.className}>
+        <div className={background} style={{ height: "100vh" }}>
+          <Header />
+          <main>{children}</main>
+          <MenuDesktop />
+        </div>
       </body>
     </html>
   );
