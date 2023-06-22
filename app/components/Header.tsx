@@ -6,7 +6,7 @@ const Header = () => {
     <header>
       <div
         className={
-          "flex items-center lg:gap-2 p-5 lg:flex-col lg:items-center lg:w-48 sm:justify-items-center sm:w-50 sm:flex-row sm:gap-4"
+          "flex items-center p-5 lg:gap-2 lg:mt-6 lg:ml-6  lg:flex-col lg:items-center lg:w-48 sm:justify-items-center sm:w-50 sm:flex-row sm:gap-4 sm:m-4 "
         }
       >
         <Image
