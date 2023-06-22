@@ -1,5 +1,5 @@
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return <div className="text-center">ABOUT</div>;
 };
 
 export default AboutPage;
