@@ -4,7 +4,8 @@ import "./MenuMobile.css";
 
 const MenuMobile = () => {
   return (
-    <div className="container-fluid">
+    <div className="absolute bottom-5 end-0.5 right-0 left-50 mx-auto w-max ">
+      {/* <div className="container-fluid"> */}
       <div className="row">
         <div className="col-xs-12">
           <div className="ms-nav-container">
@@ -17,27 +18,26 @@ const MenuMobile = () => {
               />
               <li className="ms-li ms-li3 ms-li-last">
                 <a href="javascript:void(0)">
-                  <PiLinkSimpleBold className="icon-3" />
-                  <span className="fa fa-search"></span>
+                  {/* <span className="fa fa-search"></span> */}
+                  <PiLinkSimpleBold className="icons" />
                 </a>
               </li>
               <li className="ms-li ms-li2">
                 <a href="javascript:void(0)">
-                  <FaUser className="icon-2" />
-                  <span className="fa fa-flask"></span>
+                  {/* <span className="fa fa-flask"></span> */}
+                  <FaUser className="icons" />
                 </a>
               </li>
               <li className="ms-li ms-li1 ms-li-first">
                 <a href="javascript:void(0)">
-                  <FaHouse className="icon-1" />
-                  <span className="fa fa-fort-awesome"></span>
+                  <FaHouse className="icons" />
+                  {/* <span className="fa fa-fort-awesome"></span> */}
                 </a>
               </li>
               <li className="ms-main">
                 <a href="javascript:void(0)">
                   <label className="ms-menu-toggle-lbl" htmlFor="ms-menu">
-                    {/* <span className="fa fa-plus"></span> */}
-                    <FaUser className="fa fa-plus" />
+                    <span className="fa fa-plus"></span>
                   </label>
                 </a>
               </li>
