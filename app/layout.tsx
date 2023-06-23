@@ -3,6 +3,7 @@ import MenuDesktop from "./components/MenuDesktop";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "./components/Header";
+import MenuMobile from "./components/MenuMobile";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
             height: "100vh",
           }}
         >
+          <MenuMobile />
           <Header />
           <main>{children}</main>
           <MenuDesktop />
