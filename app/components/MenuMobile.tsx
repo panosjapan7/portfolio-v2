@@ -5,7 +5,6 @@ import "./MenuMobile.css";
 const MenuMobile = () => {
   return (
     <div className="absolute bottom-5 end-0.5 right-0 left-50 mx-auto w-max ">
-      {/* <div className="container-fluid"> */}
       <div className="row">
         <div className="col-xs-12">
           <div className="ms-nav-container">
@@ -17,28 +16,33 @@ const MenuMobile = () => {
                 name="ms-menu-toggle"
               />
               <li className="ms-li ms-li3 ms-li-last">
-                <a href="javascript:void(0)">
-                  {/* <span className="fa fa-search"></span> */}
+                <a
+                // href="javascript:void(0)"
+                >
                   <PiLinkSimpleBold className="icons" />
                 </a>
               </li>
               <li className="ms-li ms-li2">
-                <a href="javascript:void(0)">
-                  {/* <span className="fa fa-flask"></span> */}
+                <a
+                // href="javascript:void(0)"
+                >
                   <FaUser className="icons" />
                 </a>
               </li>
               <li className="ms-li ms-li1 ms-li-first">
-                <a href="javascript:void(0)">
+                <a
+                // href="javascript:void(0)"
+                >
                   <FaHouse className="icons" />
-                  {/* <span className="fa fa-fort-awesome"></span> */}
                 </a>
               </li>
               <li className="ms-main">
-                <a href="javascript:void(0)">
+                <a
+                // href="javascript:void(0)"
+                >
                   <label className="ms-menu-toggle-lbl" htmlFor="ms-menu">
                     <span className="fa fa-plus">
-                      <FaPlus style={{color:"#9b9b9b" }} />
+                      <FaPlus style={{ color: "#9b9b9b" }} />
                     </span>
                   </label>
                 </a>
