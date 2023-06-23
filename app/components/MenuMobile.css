@@ -40,8 +40,10 @@ a {
 }
 .ms-nav {
   position: absolute;
-  bottom: 75px;
-  right: 75px;
+  /* bottom: 75px;
+  right: 75px; */
+  top: 40px;
+  right: 20px;
 }
 .ms-nav > .ms-main {
   position: relative;
@@ -50,30 +52,32 @@ a {
 .icons {
   position: absolute;
   bottom: 16px;
-  right: 14px;
+  right: 15px;
   z-index: 200;
   color: #9b9b9b;
+  cursor: pointer;
 }
 
 .ms-nav > .ms-li {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 1px;
+  right: 1px;
   transition: bottom 0.5s ease;
   z-index: 1;
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li a {
   /* box-shadow: 0px 5px 10px #333333; */
 }
+
 .ms-nav .ms-menu-toggle:checked ~ .ms-li1 {
-  bottom: 130%;
+  bottom: -130%;
   transition: bottom 0.5s ease;
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li1 a span {
   opacity: 1;
   transition: opacity 0.5s ease 0.1s;
 }
-.ms-nav .ms-menu-toggle:checked ~ .ms-main:after {
+/* .ms-nav .ms-menu-toggle:checked ~ .ms-main:after {
   animation: big-border-bottom-animation 0.5s ease 0.1s;
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li1:before {
@@ -81,35 +85,35 @@ a {
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li1:after {
   animation: border-bottom-animation 0.5s ease 0.2s;
-}
+} */
 .ms-nav .ms-menu-toggle:checked ~ .ms-li2 {
-  bottom: 255%;
+  bottom: -255%;
   transition: bottom 0.6s ease;
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li2 a span {
   opacity: 1;
   transition: opacity 0.6s ease 0.2s;
 }
-.ms-nav .ms-menu-toggle:checked ~ .ms-li2:before {
+/* .ms-nav .ms-menu-toggle:checked ~ .ms-li2:before {
   animation: border-top-animation 0.5s ease 0.2s;
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li2:after {
   animation: border-bottom-animation 0.5s ease 0.3s;
-}
+} */
 .ms-nav .ms-menu-toggle:checked ~ .ms-li3 {
-  bottom: 380%;
+  bottom: -380%;
   transition: bottom 0.7s ease;
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li3 a span {
   opacity: 1;
   transition: opacity 0.7s ease 0.3s;
 }
-.ms-nav .ms-menu-toggle:checked ~ .ms-li3:before {
+/* .ms-nav .ms-menu-toggle:checked ~ .ms-li3:before {
   animation: border-top-animation 0.5s ease 0.3s;
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li3:after {
   animation: border-bottom-animation 0.5s ease 0.4s;
-}
+} */
 .ms-nav .ms-menu-toggle:checked ~ .ms-li4 {
   bottom: 495%;
   transition: bottom 0.8s ease;
@@ -118,9 +122,9 @@ a {
   opacity: 1;
   transition: opacity 0.8s ease 0.4s;
 }
-.ms-nav .ms-menu-toggle:checked ~ .ms-li4:before {
+/* .ms-nav .ms-menu-toggle:checked ~ .ms-li4:before {
   animation: border-top-animation 0.5s ease 0.4s;
-}
+} */
 
 .ms-nav .ms-menu-toggle ~ .ms-li:before {
   content: "";
@@ -131,8 +135,8 @@ a {
   left: 0;
   right: 0;
   margin: auto;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
+  /* border-left: 20px solid transparent; */
+  /* border-right: 20px solid transparent; */
   /* border-top: 0px solid #337ab7; */
 }
 .ms-nav .ms-menu-toggle ~ .ms-li:before {
@@ -144,8 +148,8 @@ a {
   left: 0;
   right: 0;
   margin: auto;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
+  /* border-left: 20px solid transparent; */
+  /* border-right: 20px solid transparent; */
   /* border-top: 0px solid #337ab7; */
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li:before {
@@ -157,8 +161,8 @@ a {
   left: 0;
   right: 0;
   margin: auto;
-  border-left: 24px solid transparent;
-  border-right: 24px solid transparent;
+  /* border-left: 24px solid transparent; */
+  /* border-right: 24px solid transparent; */
   /* border-top: 25px solid #337ab7; */
   z-index: 11;
 }
@@ -171,10 +175,10 @@ a {
   left: 0;
   right: 0;
   margin: auto;
-  border-left: 24px solid transparent;
-  border-right: 24px solid transparent;
+  /* border-left: 24px solid transparent; */
+  /* border-right: 24px solid transparent; */
   /* border-bottom: 25px solid #337ab7; */
-  transition: border-bottom 0.3s ease;
+  /* transition: border-bottom 0.3s ease; */
   z-index: 11;
 }
 
@@ -187,10 +191,10 @@ a {
   left: 0;
   right: 0;
   margin: auto;
-  border-left: 24px solid transparent;
-  border-right: 24px solid transparent;
+  /* border-left: 24px solid transparent; */
+  /* border-right: 24px solid transparent; */
   /* border-bottom: 45px solid #337ab7; */
-  transition: border-bottom 0.3s ease;
+  /* transition: border-bottom 0.3s ease; */
   z-index: 11;
 }
 .ms-nav .ms-menu-toggle:checked ~ .ms-li-last:after {
@@ -202,8 +206,8 @@ a {
   left: 0;
   right: 0;
   margin: auto;
-  border-left: 0px solid transparent;
-  border-right: 0px solid transparent;
+  /* border-left: 0px solid transparent; */
+  /* border-right: 0px solid transparent; */
   /* border-bottom: 0px solid #337ab7; */
 }
 
@@ -221,14 +225,16 @@ a {
   opacity: 1;
 }
 .ms-nav > .ms-main > a {
-  box-shadow: 0px 5px 8px #333333;
+  /* box-shadow: 0px 5px 8px #333333; */
+  /* border: 1px solid #b8b7b7; */
 }
 .ms-nav > li a {
   font-size: 30px;
   color: #ffffff;
   /* background: #337ab7; */
   /* background: none; */
-  background-color: red;
+
+  /* background-color: red; */
   width: 60px;
   height: 60px;
   display: block;
@@ -236,14 +242,19 @@ a {
   position: relative;
   text-align: center;
 }
-
+.ms-main {
+  border: 2px solid #b8b7b7;
+  border-radius: 100%;
+}
 .ms-nav > .ms-main a,
 .ms-nav > .ms-main > a > label {
   font-size: 30px;
   color: #ffffff;
   /* background: #337ab7; */
   /* background: none; */
-  background-color: blue;
+  /* background-color: blue; */
+  /* background-color: white; */
+  background-color: #eee8e8;
   width: 60px;
   height: 60px;
   display: block;
@@ -265,7 +276,7 @@ a {
   opacity: 0;
   z-index: 12;
 }
-@keyframes border-top-animation {
+/* @keyframes border-top-animation {
   0% {
     bottom: 0px;
   }
@@ -297,4 +308,4 @@ a {
   100% {
     top: 0px;
   }
-}
+} */
