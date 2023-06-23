@@ -45,9 +45,9 @@ export default function RootLayout({
             height: "100vh",
           }}
         >
-          <MenuMobile />
           <Header />
           <main>{children}</main>
+          <MenuMobile />
           <MenuDesktop />
         </div>
       </body>
