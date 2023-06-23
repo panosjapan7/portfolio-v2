@@ -1,5 +1,5 @@
 import { PiLinkSimpleBold } from "react-icons/pi";
-import { FaHouse, FaUser } from "react-icons/fa6";
+import { FaHouse, FaUser, FaPlus } from "react-icons/fa6";
 import "./MenuMobile.css";
 
 const MenuMobile = () => {
@@ -37,7 +37,9 @@ const MenuMobile = () => {
               <li className="ms-main">
                 <a href="javascript:void(0)">
                   <label className="ms-menu-toggle-lbl" htmlFor="ms-menu">
-                    <span className="fa fa-plus"></span>
+                    <span className="fa fa-plus">
+                      <FaPlus style={{color:"#9b9b9b" }} />
+                    </span>
                   </label>
                 </a>
               </li>
