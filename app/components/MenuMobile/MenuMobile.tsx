@@ -1,8 +1,17 @@
+import Link from "next/link";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import { FaHouse, FaUser, FaPlus } from "react-icons/fa6";
 import "./MenuMobile.css";
+import { useState } from "react";
 
 const MenuMobile = () => {
+  const links: string[] = ["/", "/about", "/links"];
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleClick = (link: string) => {
+    setActiveLink(link);
+  };
+
   return (
     <div className="absolute bottom-5 end-0.5 right-0 left-50 mx-auto w-max ">
       <div className="row">
@@ -15,27 +24,50 @@ const MenuMobile = () => {
                 className="ms-menu-toggle"
                 name="ms-menu-toggle"
               />
-              <li className="ms-li ms-li3 ms-li-last">
+
+              <li
+                className="ms-li ms-li3 ms-li-last"
+                // className={`ms-li ms-li3 ms-li-last ${
+                //   activeLink === "/links" ? "active" : ""
+                // }`}
+              >
                 <a
-                // href="javascript:void(0)"
+                  // href="javascript:void(0)"
+                  onClick={() => handleClick("/links")}
+                  className={` ${activeLink === "/links" ? "active" : ""}`}
                 >
-                  <PiLinkSimpleBold className="icons" />
+                  <Link href="/links" style={{ width: "100%", height: "100%" }}>
+                    <PiLinkSimpleBold
+                      className="icons"
+                      // className={`icons ${
+                      //   activeLink === "/links" ? "active" : ""
+                      // }`}
+                      // onClick={() => handleClick("/links")}
+                    />
+                  </Link>
                 </a>
               </li>
+
               <li className="ms-li ms-li2">
                 <a
                 // href="javascript:void(0)"
                 >
-                  <FaUser className="icons" />
+                  <Link href="/about">
+                    <FaUser className="icons" />
+                  </Link>
                 </a>
               </li>
+
               <li className="ms-li ms-li1 ms-li-first">
                 <a
                 // href="javascript:void(0)"
                 >
-                  <FaHouse className="icons" />
+                  <Link href="/links">
+                    <FaHouse className="icons" />
+                  </Link>
                 </a>
               </li>
+
               <li className="ms-main">
                 <a
                 // href="javascript:void(0)"
