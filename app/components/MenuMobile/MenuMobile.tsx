@@ -1,16 +1,36 @@
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
 import { PiLinkSimpleBold } from "react-icons/pi";
 import { FaHouse, FaUser, FaPlus } from "react-icons/fa6";
+
 import "./MenuMobile.css";
-import { useState } from "react";
+
+const DynamicPiLinkSimpleBold = dynamic(
+  () => import("react-icons/pi").then((module) => module.PiLinkSimpleBold),
+  { ssr: false }
+);
+const DynamicFaUser = dynamic(
+  () => import("react-icons/fa").then((module) => module.FaUser),
+  { ssr: false }
+);
+const DynamicFaHome = dynamic(
+  () => import("react-icons/fa6").then((module) => module.FaHouse),
+  { ssr: false }
+);
 
 const MenuMobile = () => {
-  const links: string[] = ["/", "/about", "/links"];
-  const [activeLink, setActiveLink] = useState("");
+  const links = ["/", "/about", "/links"];
+  const [activePage, setActivePage] = useState(1);
 
-  const handleClick = (link: string) => {
-    setActiveLink(link);
-  };
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    const pageIndex = links.indexOf(currentPath);
+    if (pageIndex !== -1) {
+      setActivePage(pageIndex + 1);
+    }
+  }, []);
 
   return (
     <div className="absolute bottom-5 end-0.5 right-0 left-50 mx-auto w-max ">
@@ -25,53 +45,47 @@ const MenuMobile = () => {
                 name="ms-menu-toggle"
               />
 
-              <li
-                className="ms-li ms-li3 ms-li-last"
-                // className={`ms-li ms-li3 ms-li-last ${
-                //   activeLink === "/links" ? "active" : ""
-                // }`}
-              >
-                <a
-                  // href="javascript:void(0)"
-                  onClick={() => handleClick("/links")}
-                  className={` ${activeLink === "/links" ? "active" : ""}`}
-                >
-                  <Link href="/links" style={{ width: "100%", height: "100%" }}>
-                    <PiLinkSimpleBold
+              <li className="ms-li ms-li3 ms-li-last">
+                <div onClick={() => setActivePage(3)}>
+                  <Link href="/links">
+                    <DynamicPiLinkSimpleBold
                       className="icons"
-                      // className={`icons ${
-                      //   activeLink === "/links" ? "active" : ""
-                      // }`}
-                      // onClick={() => handleClick("/links")}
+                      style={{
+                        color: activePage === 3 ? "black" : "#9b9b9b",
+                      }}
                     />
                   </Link>
-                </a>
+                </div>
               </li>
 
               <li className="ms-li ms-li2">
-                <a
-                // href="javascript:void(0)"
-                >
+                <div onClick={() => setActivePage(2)}>
                   <Link href="/about">
-                    <FaUser className="icons" />
+                    <DynamicFaUser
+                      className="icons"
+                      style={{
+                        color: activePage === 2 ? "black" : "#9b9b9b",
+                      }}
+                    />
                   </Link>
-                </a>
+                </div>
               </li>
 
               <li className="ms-li ms-li1 ms-li-first">
-                <a
-                // href="javascript:void(0)"
-                >
-                  <Link href="/links">
-                    <FaHouse className="icons" />
+                <div onClick={() => setActivePage(1)}>
+                  <Link href="/">
+                    <DynamicFaHome
+                      className="icons"
+                      style={{
+                        color: activePage === 1 ? "black" : "#9b9b9b",
+                      }}
+                    />
                   </Link>
-                </a>
+                </div>
               </li>
 
               <li className="ms-main">
-                <a
-                // href="javascript:void(0)"
-                >
+                <a>
                   <label className="ms-menu-toggle-lbl" htmlFor="ms-menu">
                     <span className="fa fa-plus">
                       <FaPlus style={{ color: "#9b9b9b" }} />
