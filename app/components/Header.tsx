@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import MenuMobile from "./MenuMobile/MenuMobile";
 
 const Header = () => {
   return (
@@ -26,6 +27,7 @@ const Header = () => {
           </p>
         </div>
       </div>
+      <MenuMobile />
     </header>
   );
 };
