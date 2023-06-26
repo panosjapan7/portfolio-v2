@@ -46,7 +46,9 @@ export default function RootLayout({
         >
           <Header />
           <main>{children}</main>
-          <MenuDesktop />
+          <div className="hidden lg:block">
+            <MenuDesktop />
+          </div>
         </div>
       </body>
     </html>

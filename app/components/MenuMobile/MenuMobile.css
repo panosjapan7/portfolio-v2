@@ -1,0 +1,211 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  outline: none !important;
+}
+.ms-nav-container {
+  position: relative;
+}
+#ms-menu {
+  display: none;
+}
+
+.ms-nav .ms-menu-toggle:checked ~ {
+  transition: all 0.5s ease;
+}
+.ms-nav {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+@media (max-width: 640px) {
+  .ms-nav {
+    top: 20px;
+    right: 20px;
+  }
+}
+.ms-nav > .ms-main {
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  bottom: 16px;
+  right: 11px;
+  z-index: 200;
+  color: #9b9b9b;
+  cursor: pointer;
+}
+
+.ms-nav > .ms-li {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  transition: bottom 0.5s ease;
+  z-index: 1;
+}
+
+.ms-nav .ms-menu-toggle:checked ~ .ms-li1 {
+  bottom: -130%;
+  transition: bottom 0.5s ease;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li1 a span {
+  opacity: 1;
+  transition: opacity 0.5s ease 0.1s;
+}
+
+.ms-nav .ms-menu-toggle:checked ~ .ms-li2 {
+  bottom: -255%;
+  transition: bottom 0.6s ease;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li2 a span {
+  opacity: 1;
+  transition: opacity 0.6s ease 0.2s;
+}
+
+.ms-nav .ms-menu-toggle:checked ~ .ms-li3 {
+  bottom: -380%;
+  transition: bottom 0.7s ease;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li3 a span {
+  opacity: 1;
+  transition: opacity 0.7s ease 0.3s;
+}
+
+.ms-nav .ms-menu-toggle:checked ~ .ms-li4 {
+  bottom: 495%;
+  transition: bottom 0.8s ease;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li4 a span {
+  opacity: 1;
+  transition: opacity 0.8s ease 0.4s;
+}
+
+.ms-nav .ms-menu-toggle ~ .ms-li:before {
+  content: "";
+  width: 45px;
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.ms-nav .ms-menu-toggle ~ .ms-li:before {
+  content: "";
+  width: 45px;
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li:before {
+  content: "";
+  width: 45px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 11;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li:after {
+  content: "";
+  width: 45px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 11;
+}
+
+.ms-nav .ms-menu-toggle:checked ~ .ms-main:after {
+  content: "";
+  width: 50px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 11;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li-last:after {
+  content: "";
+  width: 45px;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.icon-move {
+  transform: rotate(-45deg);
+  transition: transform 0.35s ease;
+}
+
+.ms-nav .ms-menu-toggle:checked ~ .ms-main span {
+  transform: rotate(-45deg);
+  transition: transform 0.35s ease;
+}
+.ms-nav .ms-menu-toggle ~ .ms-main span {
+  transition: transform 0.35s ease;
+  opacity: 1;
+}
+.ms-nav > .ms-main > a {
+  /* box-shadow: 0px 5px 8px #333333; */
+  /* border: 1px solid #b8b7b7; */
+}
+.ms-nav > li a {
+  font-size: 30px;
+  color: #ffffff;
+
+  /* background-color: red; */
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 100%;
+  position: relative;
+  text-align: center;
+}
+.ms-main {
+  border: 2px solid #b8b7b7;
+  border-radius: 100%;
+}
+.ms-nav > .ms-main a,
+.ms-nav > .ms-main > a > label {
+  font-size: 30px;
+  color: #ffffff;
+  /* background-color: blue; */
+  background-color: #dae1ef;
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 100%;
+  position: relative;
+  text-align: center;
+  z-index: 19;
+  cursor: pointer;
+}
+.ms-nav > li > a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+  z-index: 12;
+}
