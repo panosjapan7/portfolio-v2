@@ -23,6 +23,7 @@ const DynamicFaHome = dynamic(
 const MenuMobile = () => {
   const links = ["/", "/about", "/links"];
   const [activePage, setActivePage] = useState(1);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const currentPath = window.location.pathname;
@@ -31,6 +32,11 @@ const MenuMobile = () => {
       setActivePage(pageIndex + 1);
     }
   }, []);
+
+  const handleOptionClick = (optionIndex: number) => {
+    setActivePage(optionIndex);
+    setIsMenuOpen(false);
+  };
 
   return (
     <div className="absolute bottom-5 end-0.5 right-0 left-50 mx-auto w-max ">
@@ -43,10 +49,13 @@ const MenuMobile = () => {
                 id="ms-menu"
                 className="ms-menu-toggle"
                 name="ms-menu-toggle"
+                checked={isMenuOpen}
+                onChange={(e) => setIsMenuOpen(e.target.checked)}
               />
 
               <li className="ms-li ms-li3 ms-li-last">
-                <div onClick={() => setActivePage(3)}>
+                {/* <div onClick={() => setActivePage(3)}> */}
+                <div onClick={() => handleOptionClick(3)}>
                   <Link href="/links">
                     <DynamicPiLinkSimpleBold
                       className="icons"
@@ -59,7 +68,8 @@ const MenuMobile = () => {
               </li>
 
               <li className="ms-li ms-li2">
-                <div onClick={() => setActivePage(2)}>
+                <div onClick={() => handleOptionClick(2)}>
+                  {/* <div onClick={() => setActivePage(2)}> */}
                   <Link href="/about">
                     <DynamicFaUser
                       className="icons"
@@ -72,7 +82,8 @@ const MenuMobile = () => {
               </li>
 
               <li className="ms-li ms-li1 ms-li-first">
-                <div onClick={() => setActivePage(1)}>
+                <div onClick={() => handleOptionClick(1)}>
+                  {/* <div onClick={() => setActivePage(1)}> */}
                   <Link href="/">
                     <DynamicFaHome
                       className="icons"
