@@ -19,11 +19,11 @@ const DynamicFaHome = dynamic(
 );
 
 const MenuMobile = () => {
-  const links = ["/", "/about", "/links"];
   const [activePage, setActivePage] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
+    const links = ["/", "/about", "/links"];
     const currentPath = window.location.pathname;
     const pageIndex = links.indexOf(currentPath);
     if (pageIndex !== -1) {
