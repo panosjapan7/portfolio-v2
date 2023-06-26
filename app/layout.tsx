@@ -3,7 +3,6 @@ import MenuDesktop from "./components/MenuDesktop";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "./components/Header";
-import MenuMobile from "./components/MenuMobile/MenuMobile";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,8 +46,9 @@ export default function RootLayout({
         >
           <Header />
           <main>{children}</main>
-          {/* <MenuMobile /> */}
-          <MenuDesktop />
+          <div className="hidden lg:block">
+            <MenuDesktop />
+          </div>
         </div>
       </body>
     </html>
