@@ -1,0 +1,34 @@
+@media (max-width: 920px) {
+  .content-wrapper {
+    margin-top: 40px;
+  }
+}
+
+/* Sun */
+.sun-container {
+  width: 201px;
+  height: 201px;
+  left: calc(50% - 201px / 2 + 0.5px);
+  bottom: 678px;
+
+  background: #ffc43f;
+  opacity: 0.77;
+  filter: blur(50px);
+}
+@media (max-width: 700px) {
+  .sun-container {
+    width: 181px;
+    height: 181px;
+  }
+}
+@media (max-width: 640px) {
+  .sun-container {
+    width: 151px;
+    height: 151px;
+  }
+}
+@media (max-width: 540px) {
+  .sun-container {
+    margin-top: 40px;
+  }
+}
