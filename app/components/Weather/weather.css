@@ -34,32 +34,6 @@
 }
 
 /* Loader */
-.circle-rotate-1-horizontal {
-  margin-top: 60px;
-  --size: 24px;
-  --color: #848383;
-  --animation-timing-function: linear;
-  --animation-duration: 1s;
-  width: var(--size);
-  height: var(--size);
-  background-color: var(--color);
-  border-radius: 50%;
-  transform: rotateY(0deg);
-  animation: var(--animation-timing-function) var(--animation-duration) infinite
-    circle-rotate-1-horizontal-animation;
-}
-
-@keyframes circle-rotate-1-horizontal-animation {
-  from {
-    transform: rotateY(0deg);
-  }
-
-  to {
-    transform: rotateY(180deg);
-  }
-}
-
-/* Loader 2 */
 .loaderContainer {
   display: flex;
   flex-direction: column;
@@ -68,7 +42,7 @@
 .line-2-vertical {
   --size: 34px;
   --stroke-width: calc(var(--size) / 8);
-  --color: currentColor;
+  --color: #9f9f9f;
   --animation-timing-function: linear;
   --animation-duration: 1s;
   position: relative;
