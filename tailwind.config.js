@@ -19,6 +19,9 @@ module.exports = {
       border: {
         "sunny-day-border": "6px solid #FFFFFF",
       },
+      spacing: {
+        44: "44px",
+      },
     },
   },
   plugins: [],
