@@ -11,7 +11,7 @@ const AboutPage = () => {
     <div className="pl-11 pr-11 flex justify-center gap-10">
       <div className="left-column">
         <div>
-          <h2 className="text-xl font-semibold mb-5">About Me</h2>
+          <h2 className="text-xl font-semibold mb-2">About Me</h2>
 
           <div>
             <MenuItem
@@ -55,7 +55,7 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="mt-12">
-          <h2 className="text-xl font-semibold mb-5">Projects</h2>
+          <h2 className="text-xl font-semibold mb-2">Projects</h2>
           <MenuItem
             itemValue="portfolio"
             selectedTab={selectedTab}
