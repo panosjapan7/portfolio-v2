@@ -6,7 +6,7 @@ const AboutPage = () => {
     <div className="pl-11 pr-11 flex justify-center gap-10">
       <div className="left-column">
         <div>
-          <h2 className="text-xl font-bold mb-5">About Me</h2>
+          <h2 className="text-xl font-semibold mb-5">About Me</h2>
           <div className="flex items-center gap-2 mb-5">
             <Image
               className="rounded border border-white"
@@ -41,7 +41,7 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="mt-11">
-          <h2 className="text-xl font-bold mb-5">Projects</h2>
+          <h2 className="text-xl font-semibold mb-5">Projects</h2>
           <div className="flex items-center gap-2 mb-5">
             <div className="exp-container">
               <Image
