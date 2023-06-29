@@ -18,12 +18,12 @@ a {
 }
 .ms-nav {
   position: absolute;
-  top: 36px;
+  top: 32px;
   right: 36px;
 }
 @media (max-width: 640px) {
   .ms-nav {
-    top: 20px;
+    top: 30px;
     right: 20px;
   }
 }

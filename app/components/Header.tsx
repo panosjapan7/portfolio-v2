@@ -14,7 +14,7 @@ const Header = () => {
       >
         <div
           className={
-            "flex items-center p-5 lg:gap-2 lg:mt-6 lg:ml-6  lg:flex-col lg:items-center lg:w-48 sm:justify-items-center sm:w-50 sm:flex-row sm:gap-4 sm:m-4 "
+            "flex items-center lg:pt-5 lg:gap-2 lg:ml-6 lg:flex-col lg:items-center lg:w-48 md:pt-8 md:ml-6 sm:justify-items-center sm:w-50 sm:flex-row sm:gap-4 sm:ml-6 sm:pt-8 pt-8 ml-6 gap-4"
           }
         >
           <Image
