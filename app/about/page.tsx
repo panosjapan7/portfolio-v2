@@ -17,7 +17,6 @@ const AboutPage = () => {
                 selectedTab === "about-me" ? "cursor-default" : "cursor-pointer"
               }`}
               onClick={() => setSelectedTab("about-me")}
-              // style={{ position: "relative" }}
             >
               <Image
                 className="rounded border border-white z-10"
