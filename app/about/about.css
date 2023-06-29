@@ -7,3 +7,14 @@
   justify-content: center;
   align-items: center;
 }
+
+.grey-reactangle {
+  width: 180px;
+  height: 40px;
+  background-color: rgb(238, 238, 238);
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  z-index: 1;
+  border-radius: 10px;
+}
