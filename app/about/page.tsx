@@ -7,15 +7,21 @@ const AboutPage = () => {
       <div className="left-column">
         <div>
           <h2 className="text-xl font-semibold mb-5">About Me</h2>
-          <div className="flex items-center gap-2 mb-5">
-            <Image
-              className="rounded border border-white"
-              src="/images/panos-2-square.jpg"
-              width={23}
-              height={23}
-              alt="Panos"
-            />
-            <p className="text-xs font-medium">About Me</p>
+          <div style={{ position: "relative" }}>
+            <div
+              className="flex items-center gap-2 mb-5 relative"
+              style={{ zIndex: 2 }}
+            >
+              <Image
+                className="rounded border border-white"
+                src="/images/panos-2-square.jpg"
+                width={23}
+                height={23}
+                alt="Panos"
+              />
+              <p className="text-xs font-medium">About Me</p>
+            </div>
+            <div className="grey-reactangle" style={{ zIndex: 1 }}></div>
           </div>
           <div className="flex items-center gap-2 mb-5">
             <div className="rounded border border-white star-container">
