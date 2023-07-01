@@ -44,7 +44,7 @@ const Weather = () => {
 
   return (
     <main>
-      <div className="content-wrapper flex justify-center text-center">
+      <div className="weather-container flex justify-center text-center">
         {!loading ? (
           <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
             <div className="sun-container"></div>
