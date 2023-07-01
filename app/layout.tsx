@@ -6,7 +6,7 @@ import Header from "./components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
 // export const metadata = {

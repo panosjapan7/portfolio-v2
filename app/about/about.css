@@ -1,0 +1,19 @@
+.exp-container {
+  height: 22px;
+  width: 22px;
+  border: 1px solid white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grey-reactangle {
+  height: 40px;
+  background-color: rgb(238, 238, 238);
+  position: absolute;
+  top: -9px;
+  right: 20px;
+  z-index: 1;
+  border-radius: 10px;
+}

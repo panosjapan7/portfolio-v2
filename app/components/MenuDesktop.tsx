@@ -15,7 +15,7 @@ const MenuDesktop = () => {
   const [activePage, setActivePage] = useState(0);
 
   return (
-    <div className="absolute bottom-16 end-0.5 right-0 left-0 mx-auto w-max ">
+    <div className="absolute bottom-8 end-0.5 right-0 left-0 mx-auto w-max ">
       <motion.div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
