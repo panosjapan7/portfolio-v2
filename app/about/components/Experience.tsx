@@ -6,7 +6,7 @@ const Experience = () => {
       <h2 className="font-semibold text-xl">Experience</h2>
       <div className="horizontal-line"></div>
       <div className="content-wrapper">
-        <div style={{ height: "100%" }} className="mb-6 pr-3 pl-2">
+        <div style={{ height: "100%" }} className="mb-6 mt-4 pr-3 pl-2">
           <h3 className="font-medium text-lg">Moveat</h3>
           <p className="text-slate-600 text-sm tracking-wide">
             Dec. 2022 - May 2023
