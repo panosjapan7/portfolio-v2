@@ -10,7 +10,10 @@ import TechnicalSkills from "./components/TechnicalSkills";
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
   return (
-    <div className="mt-0 pl-11 pr-11 flex justify-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10">
+    <div
+      className="mt-0 pl-11 pr-11 flex justify-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10"
+      style={{ maxWidth: 800 }}
+    >
       <div className="left-column">
         <div>
           <h2 className="text-xl font-semibold mb-2">About Me</h2>

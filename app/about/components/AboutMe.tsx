@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <div className="max-w-lg">
-      <div className="mb-6">
+    <div className="max-w-xl">
+      <div className="mb-6 max-w-xl">
         <h2 className="font-semibold text-lg text-slate-800">About Me</h2>
         <div style={{ border: "1px solid #dddddd", marginBottom: 8 }}></div>
         <p className="font-light mb-1">
