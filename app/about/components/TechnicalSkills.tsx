@@ -10,7 +10,6 @@ const TechnicalSkills = () => {
         style={{
           border: "1px solid #dddddd",
           marginBottom: 12,
-          //   maxWidth: 512,
           width: "100%",
           boxSizing: "border-box",
         }}
