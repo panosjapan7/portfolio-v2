@@ -10,9 +10,9 @@
 .fade-div {
   width: 520px;
   height: 50px;
-  position: absolute;
-  bottom: 122px;
-  /* background-color: red; */
+  margin-top: -50px;
+  z-index: 30;
+  position: relative;
   background: linear-gradient(
     181.79deg,
     rgba(236, 232, 229, 0.29) 28.51%,
