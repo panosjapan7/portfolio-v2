@@ -5,6 +5,7 @@ import "./about.css";
 import { useState } from "react";
 import MenuItem from "./components/MenuItem";
 import AboutMe from "./components/AboutMe";
+import TechnicalSkills from "./components/TechnicalSkills";
 
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
@@ -98,7 +99,8 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="row-span-3 col-span-4">
-        <p>{selectedTab === "about-me" && <AboutMe />}</p>
+        {selectedTab === "about-me" && <AboutMe />}
+        {selectedTab === "tech-skills" && <TechnicalSkills />}
       </div>
     </div>
   );
