@@ -18,3 +18,9 @@
     rgba(237, 232, 228) 73.46%
   );
 }
+
+.horizontal-line {
+  border: 1px solid #dddddd;
+  margin-bottom: 12px;
+  width: 100%;
+}

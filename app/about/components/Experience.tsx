@@ -4,13 +4,7 @@ const Experience = () => {
   return (
     <div className="max-w-xl">
       <h2 className="font-semibold text-xl">Experience</h2>
-      <div
-        style={{
-          border: "1px solid #dddddd",
-          marginBottom: 12,
-          width: "100%",
-        }}
-      ></div>
+      <div className="horizontal-line"></div>
       <div className="content-wrapper">
         <div style={{ height: "100%" }} className="mb-6 pr-3 pl-2">
           <h3 className="font-medium text-lg">Moveat</h3>
