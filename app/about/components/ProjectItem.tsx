@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import { FaGithub } from "react-icons/fa6";
 
@@ -70,7 +68,7 @@ const ProjectItem: React.FC<ProjectItem> = ({
       </div>
       <div className="flex flex-row gap-10 ">
         <a
-          href="https://www.google.com"
+          href={github}
           target="_blank"
           className="hover:underline-offset-2 hover:underline"
         >
@@ -81,7 +79,7 @@ const ProjectItem: React.FC<ProjectItem> = ({
         </a>
 
         <a
-          href="https://www.google.com"
+          href={link}
           target="_blank"
           className="hover:underline-offset-2 hover:underline"
         >
