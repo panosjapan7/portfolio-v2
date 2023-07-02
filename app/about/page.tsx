@@ -12,10 +12,10 @@ const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
   return (
     <div
-      className="mt-0 pl-11 pr-11 flex justify-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10"
-      style={{ maxWidth: 800 }}
+      className="mt-0 pl-11 pr-11 justify-center self-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10 grid grid-cols-4"
+      // style={{ maxWidth: 900 }}
     >
-      <div className="left-column">
+      <div className="left-column col-span-1">
         <div>
           <h2 className="text-xl font-semibold mb-2">About Me</h2>
 
@@ -102,7 +102,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <div className="row-span-3 col-span-4">
+      <div className="row-span-3 col-span-3">
         {selectedTab === "about-me" && <AboutMe />}
         {selectedTab === "tech-skills" && <TechnicalSkills />}
         {selectedTab === "experience" && <Experience />}
