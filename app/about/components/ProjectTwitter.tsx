@@ -20,14 +20,14 @@ const ProjectTwitter = () => {
       <FaTwitter
         style={{
           position: "absolute",
-          width: 400,
-          height: 400,
+          width: 350,
+          height: 350,
           filter: "blur(8px)",
           fill: "#1DA1F2",
           opacity: 0.15,
-          top: "55%",
+          top: "60%",
           left: 0,
-          right: "10%",
+          right: "17%",
           margin: "auto",
           transform: "translateY(-50%)",
           textAlign: "center",
