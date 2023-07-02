@@ -3,7 +3,7 @@ import "./experience.css";
 const Experience = () => {
   return (
     <div className="max-w-xl">
-      <h2 className="font-semibold text-xl">Experience</h2>
+      <h2 className="font-semibold text-lg">Experience</h2>
       <div className="horizontal-line"></div>
       <div className="content-wrapper">
         <div style={{ height: "100%" }} className="mb-6 mt-4 pr-3 pl-2">
