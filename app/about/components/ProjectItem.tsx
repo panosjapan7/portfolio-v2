@@ -22,7 +22,7 @@ const ProjectItem: React.FC<ProjectItem> = ({
   link,
 }) => {
   return (
-    <div className="max-w-xl">
+    <div className="max-w-xl z-20" style={{ zIndex: 30, position: "relative" }}>
       <div className="mb-5 max-w-xl">
         <h2 className="font-semibold text-lg text-slate-800">{projectTitle}</h2>
         <div style={{ border: "1px solid #dddddd", marginBottom: 8 }}></div>
