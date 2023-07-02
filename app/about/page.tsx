@@ -8,6 +8,7 @@ import AboutMe from "./components/AboutMe";
 import TechnicalSkills from "./components/TechnicalSkills";
 import Experience from "./components/Experience";
 import ProjectProfile from "./components/ProjectProfile";
+import ProjectMern from "./components/ProjectMern";
 
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
@@ -108,6 +109,7 @@ const AboutPage = () => {
         {selectedTab === "tech-skills" && <TechnicalSkills />}
         {selectedTab === "experience" && <Experience />}
         {selectedTab === "portfolio" && <ProjectProfile />}
+        {selectedTab === "mern" && <ProjectMern />}
       </div>
     </div>
   );
