@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
 
-const ProjectProfile = () => {
+const ProjectPortfolio = () => {
   return (
     <div className="relative">
       <ProjectItem
@@ -43,4 +43,4 @@ const ProjectProfile = () => {
   );
 };
 
-export default ProjectProfile;
+export default ProjectPortfolio;

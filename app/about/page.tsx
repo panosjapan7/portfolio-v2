@@ -7,7 +7,7 @@ import MenuItem from "./components/MenuItem";
 import AboutMe from "./components/AboutMe";
 import TechnicalSkills from "./components/TechnicalSkills";
 import Experience from "./components/Experience";
-import ProjectProfile from "./components/ProjectProfile";
+import ProjectPortfolio from "./components/ProjectPortfolio";
 import ProjectMern from "./components/ProjectMern";
 import ProjectTwitter from "./components/ProjectTwitter";
 
@@ -71,7 +71,7 @@ const AboutPage = () => {
             setSelectedTab={setSelectedTab}
             image="p-icon.svg"
             imageAlt="Profile icon"
-            menuText="Profile"
+            menuText="Portfolio Website"
             imageWidth={22}
             imageHeight={22}
           />
@@ -109,7 +109,7 @@ const AboutPage = () => {
         {selectedTab === "about-me" && <AboutMe />}
         {selectedTab === "tech-skills" && <TechnicalSkills />}
         {selectedTab === "experience" && <Experience />}
-        {selectedTab === "portfolio" && <ProjectProfile />}
+        {selectedTab === "portfolio" && <ProjectPortfolio />}
         {selectedTab === "mern" && <ProjectMern />}
         {selectedTab === "twitter" && <ProjectTwitter />}
       </div>
