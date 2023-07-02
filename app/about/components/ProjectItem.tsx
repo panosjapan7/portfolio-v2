@@ -8,12 +8,20 @@ interface ProjectItem {
   projectTitle: string;
   description: string[];
   features: string[];
+  frontend?: string;
+  backend?: string;
+  github?: string;
+  link?: string;
 }
 
 const ProjectItem: React.FC<ProjectItem> = ({
   projectTitle,
   description,
   features,
+  frontend,
+  backend,
+  github,
+  link,
 }) => {
   return (
     <div className="max-w-xl">
@@ -41,19 +49,23 @@ const ProjectItem: React.FC<ProjectItem> = ({
         <p className="font-semibold text-slate-800 mb-1">
           Tools & Technologies
         </p>
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <p className="text-sm font-medium text-slate-800">Frontend</p>
-            <p className="italic text-xs leading-5">
-              Figma, Framer Motion, Next JS, Tailwind, TypeScript, Weather API
-            </p>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-slate-800">Backend</p>
-            <p className="italic text-xs leading-5">
-              Figma, Framer Motion, Next JS, Tailwind, TypeScript, Weather API
-            </p>
-          </div>
+        <div
+          className={`grid ${
+            frontend && backend ? "grid-cols-2" : "grid-cols-1"
+          }  gap-3`}
+        >
+          {frontend && (
+            <div>
+              <p className="text-sm font-medium text-slate-800">Frontend</p>
+              <p className="italic text-xs leading-5">{frontend}</p>
+            </div>
+          )}
+          {backend && (
+            <div>
+              <p className="text-sm font-medium text-slate-800">Backend</p>
+              <p className="italic text-xs leading-5">{backend}</p>
+            </div>
+          )}
         </div>
       </div>
       <div className="flex flex-row gap-10 ">
