@@ -67,33 +67,36 @@ const ProjectItem: React.FC<ProjectItem> = ({
         </div>
       </div>
       <div className="flex flex-row gap-10 ">
-        <a
-          href={github}
-          target="_blank"
-          className="hover:underline-offset-2 hover:underline"
-        >
-          <div className="flex gap-1 items-center ">
-            <FaGithub width={20} height={20} className="text-slate-800" />
-            <p className="font-medium text-slate-800">GitHub</p>
-          </div>
-        </a>
-
-        <a
-          href={link}
-          target="_blank"
-          className="hover:underline-offset-2 hover:underline"
-        >
-          <div className="flex gap-1 items-center">
-            <PiLinkSimpleBold
-              className="text-slate-800"
-              style={{
-                width: 17,
-                height: 17,
-              }}
-            />
-            <p className="font-medium text-slate-800">Link</p>
-          </div>
-        </a>
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            className="hover:underline-offset-2 hover:underline"
+          >
+            <div className="flex gap-1 items-center ">
+              <FaGithub width={20} height={20} className="text-slate-800" />
+              <p className="font-medium text-slate-800">GitHub</p>
+            </div>
+          </a>
+        )}
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            className="hover:underline-offset-2 hover:underline"
+          >
+            <div className="flex gap-1 items-center">
+              <PiLinkSimpleBold
+                className="text-slate-800"
+                style={{
+                  width: 17,
+                  height: 17,
+                }}
+              />
+              <p className="font-medium text-slate-800">Link</p>
+            </div>
+          </a>
+        )}
       </div>
     </div>
   );
