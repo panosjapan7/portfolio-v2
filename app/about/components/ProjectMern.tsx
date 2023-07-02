@@ -8,7 +8,7 @@ const ProjectMern = () => {
       <ProjectItem
         projectTitle="MERN + Firebase Authorization"
         description={[
-          "A web app boilerplate that allows the user to register and log in by using Firebase Authentication with email/password or Google OAuth.",
+          "A web app boilerplate that allows the user to register and log in by using Firebase Authentication with email/password or Google OAuth and uses MongoDB to save data separately on another database.",
         ]}
         features={[
           "The user receives an email to verify their email address.",
