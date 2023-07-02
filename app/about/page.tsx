@@ -4,12 +4,21 @@ import Image from "next/image";
 import "./about.css";
 import { useState } from "react";
 import MenuItem from "./components/MenuItem";
+import AboutMe from "./components/AboutMe";
+import TechnicalSkills from "./components/TechnicalSkills";
+import Experience from "./components/Experience";
+import ProjectPortfolio from "./components/ProjectPortfolio";
+import ProjectMern from "./components/ProjectMern";
+import ProjectTwitter from "./components/ProjectTwitter";
 
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
   return (
-    <div className="mt-0 pl-11 pr-11 flex justify-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10">
-      <div className="left-column">
+    <div
+      className="mt-0 pl-11 pr-11 justify-center self-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10 grid grid-cols-4"
+      // style={{ maxWidth: 900 }}
+    >
+      <div className="left-column col-span-1">
         <div>
           <h2 className="text-xl font-semibold mb-2">About Me</h2>
 
@@ -62,7 +71,7 @@ const AboutPage = () => {
             setSelectedTab={setSelectedTab}
             image="p-icon.svg"
             imageAlt="Profile icon"
-            menuText="Profile"
+            menuText="Portfolio Website"
             imageWidth={22}
             imageHeight={22}
           />
@@ -96,8 +105,13 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <div className="border border-black row-span-3 col-span-4">
-        <p>Right Colummn</p>
+      <div className="row-span-3 col-span-3">
+        {selectedTab === "about-me" && <AboutMe />}
+        {selectedTab === "tech-skills" && <TechnicalSkills />}
+        {selectedTab === "experience" && <Experience />}
+        {selectedTab === "portfolio" && <ProjectPortfolio />}
+        {selectedTab === "mern" && <ProjectMern />}
+        {selectedTab === "twitter" && <ProjectTwitter />}
       </div>
     </div>
   );

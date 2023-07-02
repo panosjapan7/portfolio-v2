@@ -45,7 +45,9 @@ export default function RootLayout({
           }}
         >
           <Header />
-          <main>{children}</main>
+          <main style={{ display: "flex", justifyContent: "center" }}>
+            {children}
+          </main>
           <div className="hidden lg:block">
             <MenuDesktop />
           </div>
