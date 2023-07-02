@@ -18,9 +18,6 @@ const ProjectProfile = () => {
       frontend={
         "Figma, Framer Motion, Next JS, Tailwind, TypeScript, Weather API"
       }
-      backend={
-        "Figma, Framer Motion, Next JS, Tailwind, TypeScript, Weather API"
-      }
       github="https:/www.google.com"
       link="https:/www.google.com"
     />
