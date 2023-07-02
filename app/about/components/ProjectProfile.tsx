@@ -8,13 +8,13 @@ const ProjectProfile = () => {
         projectTitle="Portfolio Website"
         description={[
           "I’ve always approached minimal design in a very clean and clinical way so I wanted to explore a minimal direction that has warmth to it.",
+          "Another thing I wanted to do is get myself familiar with Next.js and Tailwind so I used them to build this project.",
+          "I'm also really passionate about scalable and readable code so I used child components that receive props to dynamically generate components by passing just the content data to them.",
         ]}
         features={[
-          "The user receives an email to verify their email address.",
-          "The user can reset their password.",
-          "The app uses a backend server to create a user entry on MongoDB that includes among other properties a default 'user' role.",
-          "To add an 'admin' role to a user, you need to manually edit the user entry on MongoDB.",
-          'The screen "Admin Page (protected)" can be viewed only if the logged-in user has an "admin" role; if not, it redirects back to Home page.',
+          "The home page fetches data from Weather API to show weather conditions in Stockholm.",
+          "The home page displays the time and date in Stockholm.",
+          "The menu in desktop resolutions was built with Framer Motion to simulate the menu of Apple's Mac OS.",
         ]}
         frontend={
           "Figma, Framer Motion, Next JS, Tailwind, TypeScript, Weather API"
@@ -36,7 +36,7 @@ const ProjectProfile = () => {
           width: "301px",
           height: "301px",
           background: "#ffc43f",
-          opacity: 0.45,
+          opacity: 0.4,
           filter: "blur(50px)",
         }}
       ></div>
