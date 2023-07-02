@@ -10,7 +10,8 @@ const AboutMe = () => {
           Fullstack developer with a focus on frontend.
         </p>
         <p className="font-light mb-1">
-          I have a good eye for detail and a passion for user experience.
+          I have a good eye for detail, a passion for user experience and I
+          appreciate scalable and readable code.
         </p>
         <p className="font-light leading-5">
           I quickly embrace new technologies and approach challenges with a
