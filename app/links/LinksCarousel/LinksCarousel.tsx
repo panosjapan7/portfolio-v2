@@ -248,7 +248,6 @@ const LinksCarousel = () => {
                 >
                   <FaLinkedin
                     fill="#0A66C2"
-                    // style={{ width: 70, height: 70 }}
                     className="mb-2"
                     id="link-image-svg"
                   />
@@ -275,7 +274,6 @@ const LinksCarousel = () => {
                 >
                   <FaGithub
                     fill="#00000"
-                    // style={{ width: 70, height: 70 }}
                     className="mb-2"
                     id="link-image-svg"
                   />
