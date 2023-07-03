@@ -6,14 +6,14 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const LinksCarousel = () => {
   const [loading, setLoading] = useState(true);
-  let slider: any;
+  let slider: HTMLDivElement | null;
 
   let angleOffset = 0;
-  let unitAngle: any;
-  let lastMousePosition: any;
-  let curMousePosition: any;
-  let deltaMouse: any;
-  let clock: any;
+  let unitAngle: number;
+  let lastMousePosition: number;
+  let curMousePosition: number;
+  let deltaMouse: number;
+  let clock: number;
   let lastFrameTime = NaN;
   let velocity = 0;
   let meanPosition = 0;
@@ -75,7 +75,7 @@ const LinksCarousel = () => {
     clock = requestAnimationFrame(spin);
   }
 
-  function handleTouchStart(event: any) {
+  function handleTouchStart(event: TouchEvent) {
     console.log({ event });
     cancelAnimation();
     lastMousePosition = event.touches[0].clientX;
@@ -83,7 +83,7 @@ const LinksCarousel = () => {
     deltaMouse = 0;
   }
 
-  function handleTouchMove(event: any) {
+  function handleTouchMove(event: TouchEvent) {
     curMousePosition = event.touches[0].clientX;
     let delta = lastMousePosition - curMousePosition;
     deltaMouse = curMousePosition - lastMousePosition;
@@ -101,9 +101,11 @@ const LinksCarousel = () => {
 
   // let decayClock = 0;
 
-  function throttle(fn: any, wait: any) {
+  function throttle(fn: (event: WheelEvent) => void, wait: number) {
+    console.log({ fn });
+    console.log({ wait });
     var time = Date.now();
-    return function (event: any) {
+    return function (event: WheelEvent) {
       if (time + wait - Date.now() < 0) {
         fn(event);
         time = Date.now();
@@ -111,7 +113,7 @@ const LinksCarousel = () => {
     };
   }
 
-  function handleWheel(event: any) {
+  function handleWheel(event: WheelEvent) {
     cancelAnimation();
     velocity += 100 * Math.sign(event.deltaY);
     clock = requestAnimationFrame(spin);
@@ -122,7 +124,7 @@ const LinksCarousel = () => {
     let angle = (Math.PI * 2) / cards.length;
     unitAngle = 360 / cards.length;
     let radius = cards[0].offsetWidth / (2 * Math.tan(angle / 2)) + 30; // 16;
-    slider.style.transformOrigin = `center center ${-radius}px`;
+    if (slider) slider.style.transformOrigin = `center center ${-radius}px`;
     if (slider) {
       slider.style.transformOrigin = `center center ${-radius}px`;
       cards.forEach((card, index: number) => {
@@ -138,7 +140,7 @@ const LinksCarousel = () => {
     }
   }
 
-  function spin(currentFrameTime: any) {
+  function spin(currentFrameTime: number) {
     lastFrameTime = lastFrameTime || currentFrameTime;
     let deltaTime = (currentFrameTime - lastFrameTime) / 1000;
 
@@ -147,7 +149,7 @@ const LinksCarousel = () => {
     position = angleOffset;
     setAngleOffset(angleOffset);
 
-    let animating = true;
+    // let animating = true;
 
     lastFrameTime = currentFrameTime;
     if (Math.abs(velocity) > 10) {
@@ -160,7 +162,7 @@ const LinksCarousel = () => {
     }
   }
 
-  function snap(currentFrameTime: any) {
+  function snap(currentFrameTime: number) {
     lastFrameTime = lastFrameTime || currentFrameTime;
     let deltaTime = (currentFrameTime - lastFrameTime) / 1000;
 
@@ -179,13 +181,13 @@ const LinksCarousel = () => {
       meanPosition = roundToFactor(angleOffset, unitAngle);
       angleOffset = meanPosition;
       lastFrameTime = NaN;
-      let animating = false;
+      // let animating = false;
     }
   }
 
-  function setAngleOffset(newOffset: any) {
+  function setAngleOffset(newOffset: number) {
     angleOffset = newOffset;
-    slider.style.transform = `rotateY(${-angleOffset}deg)`;
+    if (slider) slider.style.transform = `rotateY(${-angleOffset}deg)`;
   }
 
   function cancelAnimation() {
