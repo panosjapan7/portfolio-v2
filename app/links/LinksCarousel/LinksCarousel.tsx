@@ -118,7 +118,14 @@ const LinksCarousel = () => {
     if (cards.length == 0) return;
     let angle = (Math.PI * 2) / cards.length;
     unitAngle = 360 / cards.length;
-    let radius = cards[0].offsetWidth / (2 * Math.tan(angle / 2)) + 30; // 16;
+
+    let radius = 30;
+    if (window.innerWidth <= 640) {
+      radius = cards[0].offsetWidth / (2 * Math.tan(angle / 2)) + 5;
+    } else {
+      radius = cards[0].offsetWidth / (2 * Math.tan(angle / 2)) + 30;
+    }
+
     if (slider) slider.style.transformOrigin = `center center ${-radius}px`;
     if (slider) {
       slider.style.transformOrigin = `center center ${-radius}px`;
@@ -213,8 +220,12 @@ const LinksCarousel = () => {
                     width={90}
                     alt="cv icon"
                     className="mb-2"
+                    id="link-image-png"
                   />
-                  <p className="text-lg hover:underline-offset-2 hover:underline">
+                  <p
+                    className="text-lg hover:underline-offset-2 hover:underline"
+                    id="link-text"
+                  >
                     Curriculum Vitae
                   </p>
                 </div>
@@ -237,10 +248,14 @@ const LinksCarousel = () => {
                 >
                   <FaLinkedin
                     fill="#0A66C2"
-                    style={{ width: 70, height: 70 }}
+                    // style={{ width: 70, height: 70 }}
                     className="mb-2"
+                    id="link-image-svg"
                   />
-                  <p className="text-lg hover:underline-offset-2 hover:underline">
+                  <p
+                    className="text-lg hover:underline-offset-2 hover:underline"
+                    id="link-text"
+                  >
                     LinkedIn Profile
                   </p>
                 </div>
@@ -260,10 +275,14 @@ const LinksCarousel = () => {
                 >
                   <FaGithub
                     fill="#00000"
-                    style={{ width: 70, height: 70 }}
+                    // style={{ width: 70, height: 70 }}
                     className="mb-2"
+                    id="link-image-svg"
                   />
-                  <p className="text-lg hover:underline-offset-2 hover:underline">
+                  <p
+                    className="text-lg hover:underline-offset-2 hover:underline"
+                    id="link-text"
+                  >
                     GitHub Profile
                   </p>
                 </div>
