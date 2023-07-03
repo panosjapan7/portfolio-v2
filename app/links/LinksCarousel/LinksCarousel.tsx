@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "./carousel.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
@@ -7,7 +7,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 const LinksCarousel = () => {
   const [loading, setLoading] = useState(true);
   let slider: HTMLDivElement | null;
-
   let angleOffset = 0;
   let unitAngle: number;
   let lastMousePosition: number;
@@ -24,12 +23,12 @@ const LinksCarousel = () => {
   const acceleration = -60;
   const mouseSensitivity = 0.2;
   const touchSensitivity = 0.25;
-  const MAX_VELOCITY = 1000;
 
   useEffect(() => {
     let cards: HTMLDivElement[] = [];
     cards = Array.from(document.querySelectorAll(".card")) as HTMLDivElement[];
-    // const cards = Array.from(document.querySelectorAll(".card")) as HTMLDivElement[]; // let cards = [...document.querySelectorAll(".card")];
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     slider = document.querySelector(".circular-slider");
     distribute(cards);
 
@@ -62,7 +61,6 @@ const LinksCarousel = () => {
     deltaMouse = curMousePosition - lastMousePosition;
     lastMousePosition = curMousePosition;
     angleOffset += delta * mouseSensitivity;
-    let lastMouseMoveTime = Date.now();
     setAngleOffset(angleOffset);
   }
 
@@ -76,7 +74,6 @@ const LinksCarousel = () => {
   }
 
   function handleTouchStart(event: TouchEvent) {
-    console.log({ event });
     cancelAnimation();
     lastMousePosition = event.touches[0].clientX;
     curMousePosition = event.touches[0].clientX;
@@ -98,8 +95,6 @@ const LinksCarousel = () => {
     position = angleOffset;
     clock = requestAnimationFrame(spin);
   }
-
-  // let decayClock = 0;
 
   function throttle(fn: (event: WheelEvent) => void, wait: number) {
     console.log({ fn });
@@ -149,8 +144,6 @@ const LinksCarousel = () => {
     position = angleOffset;
     setAngleOffset(angleOffset);
 
-    // let animating = true;
-
     lastFrameTime = currentFrameTime;
     if (Math.abs(velocity) > 10) {
       clock = requestAnimationFrame(spin);
@@ -181,7 +174,6 @@ const LinksCarousel = () => {
       meanPosition = roundToFactor(angleOffset, unitAngle);
       angleOffset = meanPosition;
       lastFrameTime = NaN;
-      // let animating = false;
     }
   }
 
