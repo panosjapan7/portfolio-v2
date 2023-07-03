@@ -207,16 +207,7 @@ const LinksCarousel = () => {
           <div className="line-2-vertical"></div>
         </div>
       )}
-      {/* 
-      {!loading ? (
-         */}
-      <div
-        id="wrapper"
-        className={`${loading ? "invisible" : "visible"}`}
-        // className={`wrapper ${
-        //   cards.length > 0 ? "display: block" : "display:hidden"
-        // }`}
-      >
+      <div id="wrapper" className={`${loading ? "invisible" : "visible"}`}>
         <div className="circular-slider">
           <div className="card">
             <div className="content">
@@ -230,7 +221,6 @@ const LinksCarousel = () => {
                   }}
                 >
                   <Image
-                    // src="/images/cv-icon-9B9B9B.png"
                     src="/images/cv-icon-black.png"
                     height={90}
                     width={90}
@@ -289,14 +279,6 @@ const LinksCarousel = () => {
           </div>
         </div>
       </div>
-
-      {/*
-      ) : (
-        <div className="loaderContainer">
-          <div className="line-2-vertical"></div>
-        </div>
-      )}
-                  */}
     </>
   );
 };
