@@ -11,6 +11,23 @@
   margin-top: 220px;
 }
 
+#link-image-svg {
+  width: 70px;
+  height: 70px;
+}
+
+@media (max-width: 640px) {
+  #link-image-png {
+    width: 36px;
+    height: 36px;
+  }
+
+  #link-image-svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .card {
   position: absolute;
   width: 20rem;
@@ -53,12 +70,16 @@
   background: none;
 }
 
-@media (max-width: 640) {
+@media (max-width: 912px) {
   p:hover {
     text-decoration: none;
   }
 }
-p {
+
+@media (max-width: 640px) {
+  #link-text {
+    font-size: 16px;
+  }
 }
 
 /* Loader */
