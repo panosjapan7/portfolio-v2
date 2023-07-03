@@ -26,12 +26,10 @@ const LinksCarousel = () => {
   const touchSensitivity = 0.25;
   const MAX_VELOCITY = 1000;
 
-  let cards: HTMLDivElement[] = [];
-
   useEffect(() => {
+    let cards: HTMLDivElement[] = [];
     cards = Array.from(document.querySelectorAll(".card")) as HTMLDivElement[];
     // const cards = Array.from(document.querySelectorAll(".card")) as HTMLDivElement[]; // let cards = [...document.querySelectorAll(".card")];
-    console.log({ cards });
     slider = document.querySelector(".circular-slider");
     distribute(cards);
 
@@ -46,10 +44,10 @@ const LinksCarousel = () => {
     }, 100);
   }, []);
 
-  let roundToFactor = (value: any, factor: any) =>
+  let roundToFactor = (value: number, factor: number) =>
     Math.round(value / factor) * factor;
 
-  function handleMouseDown(event: any) {
+  function handleMouseDown(event: MouseEvent) {
     cancelAnimation();
     lastMousePosition = event.clientX;
     curMousePosition = event.clientX;
@@ -58,7 +56,7 @@ const LinksCarousel = () => {
     window.addEventListener("mouseup", handleMouseUp);
   }
 
-  function handleMouseMove(event: any) {
+  function handleMouseMove(event: MouseEvent) {
     curMousePosition = event.clientX;
     let delta = lastMousePosition - curMousePosition;
     deltaMouse = curMousePosition - lastMousePosition;
@@ -78,6 +76,7 @@ const LinksCarousel = () => {
   }
 
   function handleTouchStart(event: any) {
+    console.log({ event });
     cancelAnimation();
     lastMousePosition = event.touches[0].clientX;
     curMousePosition = event.touches[0].clientX;
@@ -95,12 +94,12 @@ const LinksCarousel = () => {
 
   function handleTouchEnd() {
     meanPosition = roundToFactor(angleOffset, unitAngle);
-    velocity = -deltaMouse * 50 * touchSensitivity;
+    velocity = -deltaMouse * 40 * touchSensitivity;
     position = angleOffset;
     clock = requestAnimationFrame(spin);
   }
 
-  let decayClock = 0;
+  // let decayClock = 0;
 
   function throttle(fn: any, wait: any) {
     var time = Date.now();
@@ -194,7 +193,6 @@ const LinksCarousel = () => {
     lastFrameTime = NaN;
   }
 
-  console.log({ loading });
   return (
     <>
       {loading && (
@@ -222,12 +220,14 @@ const LinksCarousel = () => {
                     alt="cv icon"
                     className="mb-2"
                   />
-                  <p className="text-lg">Curriculum Vitae</p>
+                  <p className="text-lg hover:underline-offset-2 hover:underline">
+                    Curriculum Vitae
+                  </p>
                 </div>
               </a>
             </div>
           </div>
-          <div className="card" onClick={() => console.log("Panos")}>
+          <div className="card">
             <div className="content">
               <a
                 href="https://www.linkedin.com/in/panostsapanidis/"
@@ -246,7 +246,9 @@ const LinksCarousel = () => {
                     style={{ width: 70, height: 70 }}
                     className="mb-2"
                   />
-                  <p className="text-lg">LinkedIn Profile</p>
+                  <p className="text-lg hover:underline-offset-2 hover:underline">
+                    LinkedIn Profile
+                  </p>
                 </div>
               </a>
             </div>
@@ -267,7 +269,9 @@ const LinksCarousel = () => {
                     style={{ width: 70, height: 70 }}
                     className="mb-2"
                   />
-                  <p className="text-lg">GitHub Profile</p>
+                  <p className="text-lg hover:underline-offset-2 hover:underline">
+                    GitHub Profile
+                  </p>
                 </div>
               </a>
             </div>
