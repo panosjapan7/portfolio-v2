@@ -53,6 +53,14 @@
   background: none;
 }
 
+@media (max-width: 640) {
+  p:hover {
+    text-decoration: none;
+  }
+}
+p {
+}
+
 /* Loader */
 .loaderContainer {
   display: flex;
