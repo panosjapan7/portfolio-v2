@@ -41,14 +41,9 @@ const LinksCarousel = () => {
     window.addEventListener("touchend", handleTouchEnd);
     window.addEventListener("wheel", throttle(handleWheel, 300));
 
-    // console.log({ cards });
-    // console.log({ slider });
-
     setTimeout(() => {
       setLoading(false);
     }, 100);
-
-    // setLoading(false);
   }, []);
 
   let roundToFactor = (value: any, factor: any) =>
@@ -127,7 +122,7 @@ const LinksCarousel = () => {
     if (cards.length == 0) return;
     let angle = (Math.PI * 2) / cards.length;
     unitAngle = 360 / cards.length;
-    let radius = cards[0].offsetWidth / (2 * Math.tan(angle / 2)) + 16;
+    let radius = cards[0].offsetWidth / (2 * Math.tan(angle / 2)) + 30; // 16;
     slider.style.transformOrigin = `center center ${-radius}px`;
     if (slider) {
       slider.style.transformOrigin = `center center ${-radius}px`;
@@ -227,7 +222,7 @@ const LinksCarousel = () => {
                     alt="cv icon"
                     className="mb-2"
                   />
-                  <p className="text-xl">Curriculum Vitae</p>
+                  <p className="text-lg">Curriculum Vitae</p>
                 </div>
               </a>
             </div>
@@ -251,7 +246,7 @@ const LinksCarousel = () => {
                     style={{ width: 70, height: 70 }}
                     className="mb-2"
                   />
-                  <p className="text-xl">LinkedIn Profile</p>
+                  <p className="text-lg">LinkedIn Profile</p>
                 </div>
               </a>
             </div>
@@ -272,7 +267,7 @@ const LinksCarousel = () => {
                     style={{ width: 70, height: 70 }}
                     className="mb-2"
                   />
-                  <p className="text-xl">GitHub Profile</p>
+                  <p className="text-lg">GitHub Profile</p>
                 </div>
               </a>
             </div>
