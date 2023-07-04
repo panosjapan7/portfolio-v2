@@ -10,6 +10,7 @@ import Experience from "./components/Experience";
 import ProjectPortfolio from "./components/ProjectPortfolio";
 import ProjectMern from "./components/ProjectMern";
 import ProjectTwitter from "./components/ProjectTwitter";
+import AboutMobileMenu from "./components/AboutMobileMenu/AboutMobileMenu";
 
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
@@ -112,8 +113,8 @@ const AboutPage = () => {
           {selectedTab === "twitter" && <ProjectTwitter />}
         </div>
       </div>
-      <div className="md3:visible md4:hidden">
-        <p>TEST</p>
+      <div className="md3:visible md4:hidden pt-5">
+        <AboutMobileMenu />
       </div>
     </>
   );
