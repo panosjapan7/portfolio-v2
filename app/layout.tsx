@@ -41,7 +41,6 @@ export default function RootLayout({
             borderRadius: "12px",
             border: "white solid 6px",
             background: background,
-            height: "100vh",
           }}
         >
           <Header />
