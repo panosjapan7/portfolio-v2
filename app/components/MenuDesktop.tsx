@@ -6,13 +6,23 @@ import {
   useTransform,
 } from "framer-motion";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import { FaHouse, FaUser } from "react-icons/fa6";
 
 const MenuDesktop = () => {
-  let mouseX = useMotionValue(Infinity);
   const [activePage, setActivePage] = useState(0);
+
+  let mouseX = useMotionValue(Infinity);
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    const pageIndex = ["/", "/about", "/links"].indexOf(currentPath);
+
+    setActivePage(pageIndex);
+    console.log({ currentPath });
+    console.log({ pageIndex });
+  }, []);
 
   return (
     <div className="absolute bottom-8 end-0.5 right-0 left-0 mx-auto w-max z-20">
@@ -57,7 +67,7 @@ function AppIcon({
   let widthSync = useTransform(distance, [-100, 0, 100], [60, 100, 60]);
   let width = useSpring(widthSync, { mass: 0.1, stiffness: 150, damping: 12 });
 
-  const links: string[] = ["/", "/about", "/links"];
+  const links = ["/", "/about", "/links"];
   const icons = [FaHouse, FaUser, PiLinkSimpleBold];
   const IconComponent = icons[i];
 
