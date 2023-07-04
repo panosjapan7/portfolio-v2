@@ -43,40 +43,38 @@ const Weather = () => {
   }, []);
 
   return (
-    <main>
-      <div className="weather-container flex justify-center text-center">
-        {!loading ? (
-          <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
-            <div className="sun-container"></div>
-            <div>
-              <p className="mt-20 ">
-                <span className="text-4xl mr-0.5">{weather?.temp}</span>
-                <span className="text-2xl font-extralight mr-3">C</span>
-                <span className="text-2xl font-light">
-                  {weather?.description}
-                </span>
-              </p>
-              <p className="font-thin mt-2 ">Stockholm, Sweden</p>
-            </div>
-            <div className="mt-8">
-              <p>
-                <span className="font-thin mr-2.5">
-                  {moment().format("MMMM D YYYY")}
-                </span>
-                <span className="mr-2.5">|</span>
-                <span className="tracking-widest font-extralight">
-                  {moment().format("H:mm a")}
-                </span>
-              </p>
-            </div>
+    <div className="weather-container flex justify-center text-center mt-10">
+      {!loading ? (
+        <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
+          <div className="sun-container"></div>
+          <div>
+            <p className="mt-20 ">
+              <span className="text-4xl mr-0.5">{weather?.temp}</span>
+              <span className="text-2xl font-extralight mr-3">C</span>
+              <span className="text-2xl font-light">
+                {weather?.description}
+              </span>
+            </p>
+            <p className="font-thin mt-2 ">Stockholm, Sweden</p>
           </div>
-        ) : (
-          <div className="loaderContainer">
-            <div className="line-2-vertical"></div>
+          <div className="mt-8">
+            <p>
+              <span className="font-thin mr-2.5">
+                {moment().format("MMMM D YYYY")}
+              </span>
+              <span className="mr-2.5">|</span>
+              <span className="tracking-widest font-extralight">
+                {moment().format("H:mm a")}
+              </span>
+            </p>
           </div>
-        )}
-      </div>
-    </main>
+        </div>
+      ) : (
+        <div className="loaderContainer">
+          <div className="line-2-vertical"></div>
+        </div>
+      )}
+    </div>
   );
 };
 
