@@ -14,10 +14,7 @@ import ProjectTwitter from "./components/ProjectTwitter";
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
   return (
-    <div
-      className="mt-0 pl-11 pr-11 justify-center self-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10 grid grid-cols-4"
-      // style={{ maxWidth: 900 }}
-    >
+    <div className="mt-0 pb-5 pl-11 pr-11 justify-center self-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10 grid grid-cols-4">
       <div className="left-column col-span-1">
         <div>
           <h2 className="text-xl font-semibold mb-2">About Me</h2>
