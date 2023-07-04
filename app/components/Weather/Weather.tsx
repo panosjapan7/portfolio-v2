@@ -49,9 +49,13 @@ const Weather = () => {
           <div className="sun-container"></div>
           <div>
             <p className="mt-20 ">
-              <span className="text-4xl mr-0.5">{weather?.temp}</span>
-              <span className="text-2xl font-extralight mr-3">C</span>
-              <span className="text-2xl font-light">
+              <span className="text-4xl sm3:text-2xl mr-0.5 ">
+                {weather?.temp}
+              </span>
+              <span className="text-2xl sm3:text-xl font-extralight mr-3">
+                C
+              </span>
+              <span className="text-2xl sm3:text-xl font-light">
                 {weather?.description}
               </span>
             </p>
