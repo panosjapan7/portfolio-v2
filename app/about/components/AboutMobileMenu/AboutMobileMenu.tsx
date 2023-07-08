@@ -5,7 +5,9 @@ import "./aboutMobileMenu.css";
 
 const AboutMobileMenu = () => {
   const [selectedOption, setSelectedOption] = useState("about-me");
-  const [selectedSuboption, setSelectedSuboption] =
+  const [selectedAboutSuboption, setselectedAboutSuboption] =
+    useState("about-me");
+  const [selectedProjectsSuboption, setSelectedProjectsSuboption] =
     useState("portfolio-website");
 
   return (
@@ -55,27 +57,27 @@ const AboutMobileMenu = () => {
         <div className="sub-options-container">
           <div
             className={`sub-option-container ${
-              selectedSuboption === "portfolio-website"
-                ? "sub-option-active"
-                : ""
+              selectedAboutSuboption === "about-me" ? "sub-option-active" : ""
             }`}
-            onClick={() => setSelectedSuboption("portfolio-website")}
+            onClick={() => setselectedAboutSuboption("about-me")}
           >
             <h3 className="text-sm">About Me</h3>
           </div>
           <div
             className={`sub-option-container ${
-              selectedSuboption === "mern" ? "sub-option-active" : ""
+              selectedAboutSuboption === "tech-skills"
+                ? "sub-option-active"
+                : ""
             }`}
-            onClick={() => setSelectedSuboption("mern")}
+            onClick={() => setselectedAboutSuboption("tech-skills")}
           >
             <h3 className="text-sm">Technical Skills</h3>
           </div>
           <div
             className={`sub-option-container ${
-              selectedSuboption === "twitter-feed" ? "sub-option-active" : ""
+              selectedAboutSuboption === "experience" ? "sub-option-active" : ""
             }`}
-            onClick={() => setSelectedSuboption("twitter-feed")}
+            onClick={() => setselectedAboutSuboption("experience")}
           >
             <h3 className="text-sm">Experience</h3>
           </div>
@@ -86,27 +88,29 @@ const AboutMobileMenu = () => {
         <div className="sub-options-container">
           <div
             className={`sub-option-container ${
-              selectedSuboption === "portfolio-website"
+              selectedProjectsSuboption === "portfolio-website"
                 ? "sub-option-active"
                 : ""
             }`}
-            onClick={() => setSelectedSuboption("portfolio-website")}
+            onClick={() => setSelectedProjectsSuboption("portfolio-website")}
           >
             <h3 className="text-sm">Portfolio Website</h3>
           </div>
           <div
             className={`sub-option-container ${
-              selectedSuboption === "mern" ? "sub-option-active" : ""
+              selectedProjectsSuboption === "mern" ? "sub-option-active" : ""
             }`}
-            onClick={() => setSelectedSuboption("mern")}
+            onClick={() => setSelectedProjectsSuboption("mern")}
           >
             <h3 className="text-sm">MERN + Firebase Auth</h3>
           </div>
           <div
             className={`sub-option-container ${
-              selectedSuboption === "twitter-feed" ? "sub-option-active" : ""
+              selectedProjectsSuboption === "twitter-feed"
+                ? "sub-option-active"
+                : ""
             }`}
-            onClick={() => setSelectedSuboption("twitter-feed")}
+            onClick={() => setSelectedProjectsSuboption("twitter-feed")}
           >
             <h3 className="text-sm">Twitter Feed</h3>
           </div>
