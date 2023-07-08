@@ -3,7 +3,27 @@ import { FaUser } from "react-icons/fa";
 import { IoDocumentsOutline } from "react-icons/io5";
 import "./aboutMobileMenu.css";
 
-const AboutMobileMenu = () => {
+interface MobileMenu {
+  selectedTabMobile: string;
+  setSelectedTabMobile: (selectedTabMobile: string) => void;
+  selectedAboutSuboptionMobile: string;
+  setSelectedAboutSuboptionMobile: (
+    selectedAboutSuboptionMobile: string
+  ) => void;
+  selectedProjectsSuboptionMobile: string;
+  setSelectedProjectsSuboptionMobile: (
+    selectedProjectsSuboptionMobile: string
+  ) => void;
+}
+
+const AboutMobileMenu: React.FC<MobileMenu> = ({
+  selectedTabMobile,
+  setSelectedTabMobile,
+  selectedAboutSuboptionMobile,
+  setSelectedAboutSuboptionMobile,
+  selectedProjectsSuboptionMobile,
+  setSelectedProjectsSuboptionMobile,
+}) => {
   const [selectedOption, setSelectedOption] = useState("about-me");
   const [selectedAboutSuboption, setselectedAboutSuboption] =
     useState("about-me");
@@ -16,9 +36,9 @@ const AboutMobileMenu = () => {
         <div className="flex gap-3 flex-wrap">
           <div
             className={`option-container ${
-              selectedOption === "about-me" ? "active" : ""
+              selectedTabMobile === "about-me" ? "active" : ""
             }`}
-            onClick={() => setSelectedOption("about-me")}
+            onClick={() => setSelectedTabMobile("about-me")}
           >
             <FaUser
               style={{
@@ -34,9 +54,9 @@ const AboutMobileMenu = () => {
           </div>
           <div
             className={`option-container ${
-              selectedOption === "projects" ? "active" : ""
+              selectedTabMobile === "projects" ? "active" : ""
             }`}
-            onClick={() => setSelectedOption("projects")}
+            onClick={() => setSelectedTabMobile("projects")}
           >
             <IoDocumentsOutline
               style={{
@@ -53,64 +73,72 @@ const AboutMobileMenu = () => {
         </div>
       </div>
 
-      {selectedOption === "about-me" && (
+      {selectedTabMobile === "about-me" && (
         <div className="sub-options-container">
           <div
             className={`sub-option-container ${
-              selectedAboutSuboption === "about-me" ? "sub-option-active" : ""
+              selectedAboutSuboptionMobile === "about-me"
+                ? "sub-option-active"
+                : ""
             }`}
-            onClick={() => setselectedAboutSuboption("about-me")}
+            onClick={() => setSelectedAboutSuboptionMobile("about-me")}
           >
             <h3 className="text-sm">About Me</h3>
           </div>
           <div
             className={`sub-option-container ${
-              selectedAboutSuboption === "tech-skills"
+              selectedAboutSuboptionMobile === "tech-skills"
                 ? "sub-option-active"
                 : ""
             }`}
-            onClick={() => setselectedAboutSuboption("tech-skills")}
+            onClick={() => setSelectedAboutSuboptionMobile("tech-skills")}
           >
             <h3 className="text-sm">Technical Skills</h3>
           </div>
           <div
             className={`sub-option-container ${
-              selectedAboutSuboption === "experience" ? "sub-option-active" : ""
+              selectedAboutSuboptionMobile === "experience"
+                ? "sub-option-active"
+                : ""
             }`}
-            onClick={() => setselectedAboutSuboption("experience")}
+            onClick={() => setSelectedAboutSuboptionMobile("experience")}
           >
             <h3 className="text-sm">Experience</h3>
           </div>
         </div>
       )}
 
-      {selectedOption === "projects" && (
+      {selectedTabMobile === "projects" && (
         <div className="sub-options-container">
           <div
             className={`sub-option-container ${
-              selectedProjectsSuboption === "portfolio-website"
+              selectedProjectsSuboptionMobile === "portfolio-website"
                 ? "sub-option-active"
                 : ""
             }`}
-            onClick={() => setSelectedProjectsSuboption("portfolio-website")}
+            onClick={() =>
+              setSelectedProjectsSuboptionMobile("portfolio-website")
+            }
           >
             <h3 className="text-sm">Portfolio Website</h3>
           </div>
           <div
             className={`sub-option-container ${
-              selectedProjectsSuboption === "mern" ? "sub-option-active" : ""
+              selectedProjectsSuboptionMobile === "mern"
+                ? "sub-option-active"
+                : ""
             }`}
-            onClick={() => setSelectedProjectsSuboption("mern")}
+            onClick={() => setSelectedProjectsSuboptionMobile("mern")}
           >
             <h3 className="text-sm">MERN + Firebase Auth</h3>
           </div>
           <div
             className={`sub-option-container ${
-              selectedProjectsSuboption === "twitter-feed"
+              selectedProjectsSuboptionMobile === "twitter-feed"
                 ? "sub-option-active"
                 : ""
             }`}
-            onClick={() => setSelectedProjectsSuboption("twitter-feed")}
+            onClick={() => setSelectedProjectsSuboptionMobile("twitter-feed")}
           >
             <h3 className="text-sm">Twitter Feed</h3>
           </div>

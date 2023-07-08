@@ -14,6 +14,12 @@ import AboutMobileMenu from "./components/AboutMobileMenu/AboutMobileMenu";
 
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
+  const [selectedTabMobile, setSelectedTabMobile] = useState("about-me");
+  const [selectedAboutSuboptionMobile, setSelectedAboutSuboptionMobile] =
+    useState("about-me");
+  const [selectedProjectsSuboptionMobile, setSelectedProjectsSuboptionMobile] =
+    useState("portfolio-website");
+
   return (
     <>
       <div className="flex justify-center">
@@ -116,7 +122,16 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="md3:visible md4:hidden pt-6">
-        <AboutMobileMenu />
+        <AboutMobileMenu
+          selectedTabMobile={selectedTabMobile}
+          setSelectedTabMobile={setSelectedTabMobile}
+          selectedAboutSuboptionMobile={selectedAboutSuboptionMobile}
+          setSelectedAboutSuboptionMobile={setSelectedAboutSuboptionMobile}
+          selectedProjectsSuboptionMobile={selectedProjectsSuboptionMobile}
+          setSelectedProjectsSuboptionMobile={
+            setSelectedProjectsSuboptionMobile
+          }
+        />
       </div>
     </>
   );
