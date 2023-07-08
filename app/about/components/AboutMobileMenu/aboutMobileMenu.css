@@ -9,6 +9,7 @@
   width: 116px;
   height: 40px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .active {
@@ -31,4 +32,32 @@
   100% {
     transform: scale(1);
   }
+}
+
+.sub-options-container {
+  display: flex;
+  gap: 26px;
+}
+.sub-option-container {
+  font-weight: 300;
+  height: 44px;
+  width: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  color: #9b9b9b;
+  cursor: pointer;
+}
+.sub-option-active {
+  font-weight: 500;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: default;
+
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
 }
