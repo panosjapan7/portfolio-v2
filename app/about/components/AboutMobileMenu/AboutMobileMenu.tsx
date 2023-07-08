@@ -9,7 +9,7 @@ const AboutMobileMenu = () => {
     useState("portfolio-website");
 
   return (
-    <div className="ml-6">
+    <div className="ml-6 mr-3">
       <div className="flex">
         <div className="flex gap-3 flex-wrap">
           <div
