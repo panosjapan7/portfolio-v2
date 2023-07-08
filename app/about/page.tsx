@@ -15,7 +15,7 @@ import AboutMobileMenu from "./components/AboutMobileMenu/AboutMobileMenu";
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
   return (
-    <>
+    <div className="flex justify-center">
       <div className="mt-0 pb-5 pl-11 pr-11 justify-center self-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10 grid grid-cols-4 md3:hidden">
         <div className="left-column col-span-1">
           <div>
@@ -113,10 +113,10 @@ const AboutPage = () => {
           {selectedTab === "twitter" && <ProjectTwitter />}
         </div>
       </div>
-      <div className="md3:visible md4:hidden pt-5">
+      <div className="md3:visible md4:hidden pt-5" style={{ maxWidth: 475 }}>
         <AboutMobileMenu />
       </div>
-    </>
+    </div>
   );
 };
 
