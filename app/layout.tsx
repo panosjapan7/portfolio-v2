@@ -22,35 +22,67 @@ export default function RootLayout({
   const weather: string = "sunny-day";
   const backgroundWeatherGradients: string[] = [
     "linear-gradient(180deg, rgba(196, 208, 232, 0.6) 0%, rgba(232, 218, 205, 0.6) 100%)",
-    "bg-gradient-to-b from-sunny-day-blue to-sunny-day-red bg-no-repeat",
+    "bg-gradient-to-b from-sunny-day-blue to-sunny-day-red",
   ];
   let background = "";
   if (weather === "sunny-day") {
     background = backgroundWeatherGradients[0];
   }
+
   return (
     <html lang="en">
       <body
         className={inter.className}
+        // className="h-full"
         style={{
-          height: "100vh",
+          // height: "100vh",
+          // height: "100%",
+
+          background: background,
+          // background: "white",
+          // background: "red",
+          // backgroundRepeat: "no-repeat",
+
+          border: "red solid 6px",
+          borderRadius: "12px",
+
+          // margin: 0,
+          // height: 1000,
         }}
       >
+        {/*
+        
         <div
+          // className="h-full"
+          id="all-content-wrapper"
           style={{
-            borderRadius: "12px",
+            borderRadius: "16px",
             border: "white solid 6px",
             background: background,
+            // background: "red",
+            // height: "100%",
+            // boxSizing: "content-box",
           }}
         >
-          <Header />
-          <main style={{ display: "flex", justifyContent: "center" }}>
-            {children}
-          </main>
-          <div className="hidden lg:block">
-            <MenuDesktop />
-          </div>
+        */}
+        <Header />
+        <main
+          style={
+            {
+              // display: "flex",
+              // justifyContent: "center",
+              // height: 1000,
+            }
+          }
+        >
+          {children}
+        </main>
+        <div className="hidden lg:block">
+          <MenuDesktop />
         </div>
+        {/*
+        </div>
+      */}
       </body>
     </html>
   );
