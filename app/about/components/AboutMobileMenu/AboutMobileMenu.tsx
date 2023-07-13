@@ -24,12 +24,6 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
   selectedProjectsSuboptionMobile,
   setSelectedProjectsSuboptionMobile,
 }) => {
-  const [selectedOption, setSelectedOption] = useState("about-me");
-  const [selectedAboutSuboption, setselectedAboutSuboption] =
-    useState("about-me");
-  const [selectedProjectsSuboption, setSelectedProjectsSuboption] =
-    useState("portfolio-website");
-
   return (
     <div className="ml-6 mr-3">
       <div className="flex">
