@@ -17,6 +17,8 @@ module.exports = {
         sm2: { min: "401px", max: "639px" },
         sm3: { min: "0px", max: "400px" },
         md2: { min: "769px", max: "940px" },
+        md3: { min: "0px", max: "710px" },
+        md4: { min: "711px" },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

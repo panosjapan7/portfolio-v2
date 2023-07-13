@@ -3,7 +3,7 @@ import LinksCarousel from "./LinksCarousel/LinksCarousel";
 
 const LinksPage = () => {
   return (
-    <div>
+    <div className="flex justify-center text-center">
       <LinksCarousel />
     </div>
   );

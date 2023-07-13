@@ -4,7 +4,7 @@ import { FaTwitter } from "react-icons/fa6";
 
 const ProjectTwitter = () => {
   return (
-    <div className="relative">
+    <div className="relative md3:p-5">
       <ProjectItem
         projectTitle="Twitter Feed"
         description={[

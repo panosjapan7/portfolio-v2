@@ -1,0 +1,64 @@
+.option-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 4px;
+  font-weight: 300;
+  width: 116px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.active {
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4.45674px 8.91347px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(27.8546px);
+  font-weight: 500;
+  cursor: default;
+  animation: activateOption 0.2s ease;
+}
+
+@keyframes activateOption {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sub-options-container {
+  display: flex;
+  gap: 10px;
+}
+.sub-option-container {
+  font-weight: 300;
+  color: #9b9b9b;
+  cursor: pointer;
+  width: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+}
+.sub-option-active {
+  font-weight: 500;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: default;
+
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+}

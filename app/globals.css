@@ -8,7 +8,40 @@
 @media (prefers-color-scheme: dark) {
 }
 
+html {
+  min-height: 100%;
+  height: 100%;
+  /* height: 100vh; */
+  position: relative;
+  background-color: white;
+}
+
 body {
   height: 100vh;
-  position: relative;
+  /* height: 100%; */
+  width: 100%;
+}
+
+#all-content-wrapper {
+  height: 100vh;
+  /* height: 100%; */
+}
+
+@media (max-width: 751px) {
+  #all-content-wrapper {
+    /* height: 100%; */
+    /* height: 100vh; */
+  }
+}
+
+@media (max-width: 751px) {
+  #all-content-wrapper {
+    /* height: 100%; */
+    /* height: 100vh; */
+  }
+
+  body {
+    /* height: 100%; */
+    /* height: 100vh; */
+  }
 }
