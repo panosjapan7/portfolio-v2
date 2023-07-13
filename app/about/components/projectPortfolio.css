@@ -2,6 +2,22 @@
   display: none;
 }
 
+.sun-background {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 15%;
+  margin: auto;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 10;
+  width: 301px;
+  height: 301px;
+  background: #ffc43f;
+  opacity: 0.4;
+  filter: blur(50px);
+}
+
 @media (max-width: 710px) {
   .content-wrapper {
     display: flex;
@@ -27,6 +43,13 @@
       rgba(237, 232, 228) 73.46%
     );
     position: relative;
+  }
+
+  .sun-background {
+    top: 45%;
+    left: 10px;
+    width: 201px;
+    height: 201px;
   }
 }
 
