@@ -43,7 +43,7 @@ export default function RootLayout({
           // background: "red",
           // backgroundRepeat: "no-repeat",
 
-          border: "red solid 6px",
+          border: "white solid 6px",
           borderRadius: "12px",
 
           // margin: 0,
