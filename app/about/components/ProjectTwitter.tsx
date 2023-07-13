@@ -8,7 +8,7 @@ const ProjectTwitter = () => {
       <ProjectItem
         projectTitle="Twitter Feed"
         description={[
-          "One of my first school projects. It’s a pixel-perfect web page of a user’s Twitter feed.",
+          "One of my first school projects. It’s a pixel-perfect static web page of a user’s Twitter feed (the way it looked in 2021).",
         ]}
         features={[
           "Using Bootstrap was a requirement.",
@@ -16,6 +16,7 @@ const ProjectTwitter = () => {
         ]}
         frontend="Bootstrap, CSS, HTML5"
         github="https://github.com/panosjapan7/frontend2-gruppuppgift-twitter"
+        link="https://frontend2-gruppuppgift-twitter.vercel.app/"
       />
       <FaTwitter
         style={{
