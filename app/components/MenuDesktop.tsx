@@ -20,8 +20,6 @@ const MenuDesktop = () => {
     const pageIndex = ["/", "/about", "/links"].indexOf(currentPath);
 
     setActivePage(pageIndex);
-    console.log({ currentPath });
-    console.log({ pageIndex });
   }, []);
 
   return (
