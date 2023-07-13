@@ -132,9 +132,16 @@ const AboutPage = () => {
             setSelectedProjectsSuboptionMobile
           }
         />
-        {selectedAboutSuboptionMobile === "about-me" && <AboutMe />}
-        {selectedAboutSuboptionMobile === "tech-skills" && <TechnicalSkills />}
-        {selectedAboutSuboptionMobile === "experience" && <Experience />}
+        {selectedTabMobile === "about-me" &&
+          selectedAboutSuboptionMobile === "about-me" && <AboutMe />}
+        {selectedTabMobile === "about-me" &&
+          selectedAboutSuboptionMobile === "tech-skills" && <TechnicalSkills />}
+        {selectedTabMobile === "about-me" &&
+          selectedAboutSuboptionMobile === "experience" && <Experience />}
+        {selectedTabMobile === "projects" &&
+          selectedProjectsSuboptionMobile === "portfolio-website" && (
+            <ProjectPortfolio />
+          )}
       </div>
     </>
   );
