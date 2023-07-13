@@ -144,6 +144,8 @@ const AboutPage = () => {
           )}
         {selectedTabMobile === "projects" &&
           selectedProjectsSuboptionMobile === "mern" && <ProjectMern />}
+        {selectedTabMobile === "projects" &&
+          selectedProjectsSuboptionMobile === "twitter" && <ProjectTwitter />}
       </div>
     </>
   );

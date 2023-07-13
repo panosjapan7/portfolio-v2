@@ -128,11 +128,11 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
           </div>
           <div
             className={`sub-option-container ${
-              selectedProjectsSuboptionMobile === "twitter-feed"
+              selectedProjectsSuboptionMobile === "twitter"
                 ? "sub-option-active"
                 : ""
             }`}
-            onClick={() => setSelectedProjectsSuboptionMobile("twitter-feed")}
+            onClick={() => setSelectedProjectsSuboptionMobile("twitter")}
           >
             <h3 className="text-sm">Twitter Feed</h3>
           </div>
