@@ -23,24 +23,7 @@ const ProjectPortfolio = () => {
           }
           github="https://github.com/panosjapan7/portfolio-v2"
         />
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: 0,
-            right: "15%",
-            margin: "auto",
-            transform: "translateY(-50%)",
-            textAlign: "center",
-            zIndex: 10,
-
-            width: "301px",
-            height: "301px",
-            background: "#ffc43f",
-            opacity: 0.4,
-            filter: "blur(50px)",
-          }}
-        ></div>
+        <div className="sun-background"></div>
       </div>
       <div className="fade-block"></div>
     </div>
