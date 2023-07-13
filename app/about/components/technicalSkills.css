@@ -1,0 +1,42 @@
+.fade-block {
+  display: none;
+}
+
+@media (max-width: 710px) {
+  .about-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 30px;
+    z-index: 10;
+  }
+
+  .fade-block {
+    display: block;
+    width: 97%;
+    height: 30px;
+    margin-top: -28px;
+    z-index: 50;
+    background: linear-gradient(
+      181.79deg,
+      rgba(236, 232, 229, 0.29) 28.51%,
+      rgba(237, 232, 228) 73.46%
+    );
+    position: relative;
+  }
+}
+
+@media (min-height: 800px) {
+  .about-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 30px;
+    z-index: 10;
+  }
+}
