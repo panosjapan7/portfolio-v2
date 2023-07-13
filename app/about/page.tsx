@@ -142,6 +142,8 @@ const AboutPage = () => {
           selectedProjectsSuboptionMobile === "portfolio-website" && (
             <ProjectPortfolio />
           )}
+        {selectedTabMobile === "projects" &&
+          selectedProjectsSuboptionMobile === "mern" && <ProjectMern />}
       </div>
     </>
   );
