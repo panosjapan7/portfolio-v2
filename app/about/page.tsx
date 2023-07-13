@@ -134,6 +134,7 @@ const AboutPage = () => {
         />
         {selectedAboutSuboptionMobile === "about-me" && <AboutMe />}
         {selectedAboutSuboptionMobile === "tech-skills" && <TechnicalSkills />}
+        {selectedAboutSuboptionMobile === "experience" && <Experience />}
       </div>
     </>
   );
