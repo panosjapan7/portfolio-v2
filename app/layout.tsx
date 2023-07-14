@@ -1,5 +1,7 @@
 "use client";
 import MenuDesktop from "./components/MenuDesktop";
+import moment from "moment";
+import "moment-timezone";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "./components/Header";
@@ -19,13 +21,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  moment.locale("en");
+  moment.tz.setDefault("Europe/Stockholm");
+  const currentHour = moment().format("HH");
+  let isDay = false;
+  if (+currentHour > 6 && +currentHour < 20) {
+    isDay = true;
+  }
+
   const weather: string = "sunny-day";
   const backgroundWeatherGradients: string[] = [
     "linear-gradient(180deg, rgba(196, 208, 232, 0.6) 0%, rgba(232, 218, 205, 0.6) 100%)",
     "bg-gradient-to-b from-sunny-day-blue to-sunny-day-red",
   ];
   let background = "";
-  if (weather === "sunny-day") {
+  if (weather === "sunny-day" && isDay) {
     background = backgroundWeatherGradients[0];
   }
 
