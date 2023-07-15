@@ -8,7 +8,7 @@ interface Weather {
   description: string;
 }
 
-const Weather = () => {
+const Weather = ({ isDay }: { isDay: boolean }) => {
   const weatherApiKey = process.env.WEATHER_API_KEY;
   moment.locale("en");
   moment.tz.setDefault("Europe/Stockholm");
@@ -48,7 +48,7 @@ const Weather = () => {
         <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
           <div className="sun-container"></div>
           <div>
-            <p className="mt-20 ">
+            <p className="mt-20" style={{ color: isDay ? "black" : "white" }}>
               <span className="text-4xl sm3:text-2xl mr-0.5 ">
                 {weather?.temp}
               </span>
@@ -59,10 +59,15 @@ const Weather = () => {
                 {weather?.description}
               </span>
             </p>
-            <p className="font-thin mt-2 ">Stockholm, Sweden</p>
+            <p
+              className="font-thin mt-2"
+              style={{ color: isDay ? "black" : "white" }}
+            >
+              Stockholm, Sweden
+            </p>
           </div>
           <div className="mt-8">
-            <p>
+            <p style={{ color: isDay ? "black" : "white" }}>
               <span className="font-thin mr-2.5">
                 {moment().format("MMMM D YYYY")}
               </span>
