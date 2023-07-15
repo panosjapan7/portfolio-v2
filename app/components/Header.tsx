@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import MenuMobile from "./MenuMobile/MenuMobile";
 
-const Header = () => {
+const Header = ({ isDay }: { isDay: boolean }) => {
   return (
     <header>
       <div
@@ -26,10 +26,18 @@ const Header = () => {
             style={{ marginRight: 0 }}
           />
           <div>
-            <p className="font-normal text-base tracking-wide text-slate-800">
+            <p
+              className={`font-normal text-base tracking-wide ${
+                isDay ? "text-slate-800" : "text-slate-200"
+              } `}
+            >
               Panos Tsapanidis
             </p>
-            <p className="font-extralight text-sm tracking-wider text-slate-700">
+            <p
+              className={`font-extralight text-sm tracking-wider ${
+                isDay ? "text-slate-700" : "text-slate-300"
+              }`}
+            >
               Frontend developer
             </p>
           </div>
