@@ -18,7 +18,7 @@ const Header = ({ isDay }: { isDay: boolean }) => {
           }
         >
           <Image
-            className=" rounded-full mr-4"
+            className="rounded-full mr-4"
             alt="Panos"
             src="/images/panos-2-square.jpg"
             width={50}
@@ -44,7 +44,7 @@ const Header = ({ isDay }: { isDay: boolean }) => {
         </div>
 
         <div className="lg:hidden">
-          <MenuMobile />
+          <MenuMobile isDay={isDay} />
         </div>
       </div>
     </header>
