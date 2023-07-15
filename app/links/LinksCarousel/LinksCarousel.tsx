@@ -97,8 +97,6 @@ const LinksCarousel = () => {
   }
 
   function throttle(fn: (event: WheelEvent) => void, wait: number) {
-    console.log({ fn });
-    console.log({ wait });
     var time = Date.now();
     return function (event: WheelEvent) {
       if (time + wait - Date.now() < 0) {
