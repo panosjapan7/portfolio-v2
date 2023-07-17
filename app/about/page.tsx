@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import moment from "moment";
+import "moment-timezone";
 import "./about.css";
 import { useState } from "react";
 import MenuItem from "./components/MenuItem";
@@ -20,13 +22,27 @@ const AboutPage = () => {
   const [selectedProjectsSuboptionMobile, setSelectedProjectsSuboptionMobile] =
     useState("portfolio-website");
 
+  moment.locale("en");
+  moment.tz.setDefault("Europe/Stockholm");
+  const currentHour = moment().format("HH");
+  let isDay = false;
+  // if (+currentHour > 6 && +currentHour < 20) {
+  //   isDay = true;
+  // }
+
   return (
     <>
       <div className="flex justify-center">
         <div className="mt-0 pb-5 pl-11 pr-11 justify-center self-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10 grid grid-cols-4 md3:hidden">
           <div className="left-column col-span-1">
             <div>
-              <h2 className="text-xl font-semibold mb-2">About Me</h2>
+              <h2
+                className={`font-semibold text-xl mb-2 ${
+                  isDay ? "text-black" : "text-slate-100"
+                } `}
+              >
+                About Me
+              </h2>
 
               <div>
                 <MenuItem
@@ -38,6 +54,7 @@ const AboutPage = () => {
                   menuText="About Me"
                   imageWidth={22}
                   imageHeight={22}
+                  isDay={isDay}
                 />
                 <MenuItem
                   itemValue="tech-skills"
@@ -48,11 +65,13 @@ const AboutPage = () => {
                   menuText="Technical Skills"
                   imageWidth={22}
                   imageHeight={22}
+                  isDay={isDay}
                 />
                 <div
                   className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3 rounded-lg ${
                     selectedTab === "experience"
-                      ? "cursor-default bg-slate-100"
+                      ? "cursor-default " +
+                        (isDay ? "bg-slate-100" : "bg-gray-500")
                       : "cursor-pointer"
                   }`}
                   onClick={() => setSelectedTab("experience")}
@@ -65,12 +84,24 @@ const AboutPage = () => {
                       alt="star shape"
                     />
                   </div>
-                  <p className="text-xs font-medium z-10">Experience</p>
+                  <p
+                    className={`text-xs font-medium z-10 ${
+                      isDay ? "text-blac" : "text-slate-50"
+                    }`}
+                  >
+                    Experience
+                  </p>
                 </div>
               </div>
             </div>
             <div className="mt-6">
-              <h2 className="text-xl font-semibold mb-2">Projects</h2>
+              <h2
+                className={`font-semibold text-xl mb-2 ${
+                  isDay ? "text-black" : "text-slate-100"
+                } `}
+              >
+                Projects
+              </h2>
               <MenuItem
                 itemValue="portfolio"
                 selectedTab={selectedTab}
@@ -80,6 +111,7 @@ const AboutPage = () => {
                 menuText="Portfolio Website"
                 imageWidth={22}
                 imageHeight={22}
+                isDay={isDay}
               />
               <MenuItem
                 itemValue="mern"
@@ -90,11 +122,13 @@ const AboutPage = () => {
                 menuText="MERN + Firebase Auth"
                 imageWidth={22}
                 imageHeight={22}
+                isDay={isDay}
               />
               <div
-                className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3 rounded-lg  ${
+                className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3 rounded-lg ${
                   selectedTab === "twitter"
-                    ? "cursor-default bg-slate-100"
+                    ? "cursor-default " +
+                      (isDay ? "bg-slate-100" : "bg-gray-500")
                     : "cursor-pointer"
                 }`}
                 onClick={() => setSelectedTab("twitter")}
@@ -107,12 +141,18 @@ const AboutPage = () => {
                     alt="star shape"
                   />
                 </div>
-                <p className="text-xs font-medium z-10">Twitter Feed</p>
+                <p
+                  className={`text-xs font-medium z-10 ${
+                    isDay ? "text-blac" : "text-slate-50"
+                  }`}
+                >
+                  Twitter Feed
+                </p>
               </div>
             </div>
           </div>
           <div className="row-span-3 col-span-3">
-            {selectedTab === "about-me" && <AboutMe />}
+            {selectedTab === "about-me" && <AboutMe isDay={isDay} />}
             {selectedTab === "tech-skills" && <TechnicalSkills />}
             {selectedTab === "experience" && <Experience />}
             {selectedTab === "portfolio" && <ProjectPortfolio />}
@@ -133,7 +173,9 @@ const AboutPage = () => {
           }
         />
         {selectedTabMobile === "about-me" &&
-          selectedAboutSuboptionMobile === "about-me" && <AboutMe />}
+          selectedAboutSuboptionMobile === "about-me" && (
+            <AboutMe isDay={isDay} />
+          )}
         {selectedTabMobile === "about-me" &&
           selectedAboutSuboptionMobile === "tech-skills" && <TechnicalSkills />}
         {selectedTabMobile === "about-me" &&
