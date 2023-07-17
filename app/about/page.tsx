@@ -26,9 +26,9 @@ const AboutPage = () => {
   moment.tz.setDefault("Europe/Stockholm");
   const currentHour = moment().format("HH");
   let isDay = false;
-  // if (+currentHour > 6 && +currentHour < 20) {
-  //   isDay = true;
-  // }
+  if (+currentHour > 6 && +currentHour < 20) {
+    isDay = true;
+  }
 
   return (
     <>
@@ -153,7 +153,7 @@ const AboutPage = () => {
           </div>
           <div className="row-span-3 col-span-3">
             {selectedTab === "about-me" && <AboutMe isDay={isDay} />}
-            {selectedTab === "tech-skills" && <TechnicalSkills />}
+            {selectedTab === "tech-skills" && <TechnicalSkills isDay={isDay} />}
             {selectedTab === "experience" && <Experience />}
             {selectedTab === "portfolio" && <ProjectPortfolio />}
             {selectedTab === "mern" && <ProjectMern />}
@@ -177,7 +177,9 @@ const AboutPage = () => {
             <AboutMe isDay={isDay} />
           )}
         {selectedTabMobile === "about-me" &&
-          selectedAboutSuboptionMobile === "tech-skills" && <TechnicalSkills />}
+          selectedAboutSuboptionMobile === "tech-skills" && (
+            <TechnicalSkills isDay={isDay} />
+          )}
         {selectedTabMobile === "about-me" &&
           selectedAboutSuboptionMobile === "experience" && <Experience />}
         {selectedTabMobile === "projects" &&
