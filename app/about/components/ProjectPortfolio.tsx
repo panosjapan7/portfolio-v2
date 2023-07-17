@@ -2,7 +2,7 @@ import React from "react";
 import ProjectItem from "./ProjectItem";
 import "./projectPortfolio.css";
 
-const ProjectPortfolio = () => {
+const ProjectPortfolio = ({ isDay }: { isDay: boolean }) => {
   return (
     <div className="relative md3:p-5">
       <div className="content-wrapper-portfolio">
@@ -22,6 +22,7 @@ const ProjectPortfolio = () => {
             "Figma, Framer Motion, Next JS, Tailwind, TypeScript, Weather API"
           }
           github="https://github.com/panosjapan7/portfolio-v2"
+          isDay={isDay}
         />
         <div className="sun-background"></div>
       </div>
