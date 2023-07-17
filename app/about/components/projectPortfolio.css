@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 710px) {
-  .content-wrapper {
+  .content-wrapper-portfolio {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -54,7 +54,7 @@
 }
 
 @media (min-height: 800px) {
-  .content-wrapper {
+  .content-wrapper-portfolio {
     height: 100%;
     display: flex;
     flex-direction: column;

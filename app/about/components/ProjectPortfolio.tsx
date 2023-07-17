@@ -5,7 +5,7 @@ import "./projectPortfolio.css";
 const ProjectPortfolio = () => {
   return (
     <div className="relative md3:p-5">
-      <div className="content-wrapper">
+      <div className="content-wrapper-portfolio">
         <ProjectItem
           projectTitle="Portfolio Website"
           description={[
