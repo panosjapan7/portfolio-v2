@@ -155,9 +155,9 @@ const AboutPage = () => {
             {selectedTab === "about-me" && <AboutMe isDay={isDay} />}
             {selectedTab === "tech-skills" && <TechnicalSkills isDay={isDay} />}
             {selectedTab === "experience" && <Experience isDay={isDay} />}
-            {selectedTab === "portfolio" && <ProjectPortfolio />}
-            {selectedTab === "mern" && <ProjectMern />}
-            {selectedTab === "twitter" && <ProjectTwitter />}
+            {selectedTab === "portfolio" && <ProjectPortfolio isDay={isDay} />}
+            {selectedTab === "mern" && <ProjectMern isDay={isDay} />}
+            {selectedTab === "twitter" && <ProjectTwitter isDay={isDay} />}
           </div>
         </div>
       </div>
@@ -186,12 +186,16 @@ const AboutPage = () => {
           )}
         {selectedTabMobile === "projects" &&
           selectedProjectsSuboptionMobile === "portfolio-website" && (
-            <ProjectPortfolio />
+            <ProjectPortfolio isDay={isDay} />
           )}
         {selectedTabMobile === "projects" &&
-          selectedProjectsSuboptionMobile === "mern" && <ProjectMern />}
+          selectedProjectsSuboptionMobile === "mern" && (
+            <ProjectMern isDay={isDay} />
+          )}
         {selectedTabMobile === "projects" &&
-          selectedProjectsSuboptionMobile === "twitter" && <ProjectTwitter />}
+          selectedProjectsSuboptionMobile === "twitter" && (
+            <ProjectTwitter isDay={isDay} />
+          )}
       </div>
     </>
   );
