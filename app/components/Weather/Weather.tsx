@@ -46,7 +46,12 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
     <div className="weather-container flex justify-center text-center mt-10">
       {!loading ? (
         <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
-          <div className="sun-container"></div>
+          {isDay ? (
+            <div className="sun-container"></div>
+          ) : (
+            <div className="moon-container"></div>
+          )}
+
           <div>
             <p className="mt-20" style={{ color: isDay ? "black" : "white" }}>
               <span className="text-4xl sm3:text-2xl mr-0.5 ">
