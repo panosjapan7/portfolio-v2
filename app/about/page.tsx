@@ -171,6 +171,7 @@ const AboutPage = () => {
           setSelectedProjectsSuboptionMobile={
             setSelectedProjectsSuboptionMobile
           }
+          isDay={isDay}
         />
         {selectedTabMobile === "about-me" &&
           selectedAboutSuboptionMobile === "about-me" && (
