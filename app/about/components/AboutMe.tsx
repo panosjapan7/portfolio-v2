@@ -1,7 +1,6 @@
 import "./aboutMe.css";
 
 const AboutMe = ({ isDay }: { isDay: boolean }) => {
-  console.log(isDay);
   return (
     <div className="md3:ml-6 md3:mr-4 md3:mt-5 max-w-xl">
       <div className="about-content-wrapper">
