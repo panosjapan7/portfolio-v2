@@ -127,7 +127,7 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               ).includes("sub-option-active")
                 ? isDay
                   ? "rgba(255, 255, 255, 0.4)"
-                  : "rgba(59, 59, 59, 0.1)"
+                  : "rgba(110, 108, 108, 0.8)"
                 : "unset",
             }}
             onClick={() => setSelectedAboutSuboptionMobile("about-me")}
@@ -147,7 +147,7 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               ).includes("sub-option-active")
                 ? isDay
                   ? "rgba(255, 255, 255, 0.4)"
-                  : "rgba(59, 59, 59, 0.1)"
+                  : "rgba(110, 108, 108, 0.8)"
                 : "unset",
             }}
             onClick={() => setSelectedAboutSuboptionMobile("tech-skills")}
@@ -167,7 +167,7 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               ).includes("sub-option-active")
                 ? isDay
                   ? "rgba(255, 255, 255, 0.4)"
-                  : "rgba(59, 59, 59, 0.1)"
+                  : "rgba(110, 108, 108, 0.8)"
                 : "unset",
             }}
             onClick={() => setSelectedAboutSuboptionMobile("experience")}
@@ -194,7 +194,7 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               ).includes("sub-option-active")
                 ? isDay
                   ? "rgba(255, 255, 255, 0.4)"
-                  : "rgba(59, 59, 59, 0.1)"
+                  : "rgba(110, 108, 108, 0.8)"
                 : "unset",
             }}
             onClick={() =>
@@ -216,7 +216,7 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               )
                 ? isDay
                   ? "rgba(255, 255, 255, 0.4)"
-                  : "rgba(59, 59, 59, 0.1)"
+                  : "rgba(110, 108, 108, 0.8)"
                 : "unset",
             }}
             onClick={() => setSelectedProjectsSuboptionMobile("mern")}
@@ -236,7 +236,7 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               ).includes("sub-option-active")
                 ? isDay
                   ? "rgba(255, 255, 255, 0.4)"
-                  : "rgba(59, 59, 59, 0.1)"
+                  : "rgba(110, 108, 108, 0.8)"
                 : "unset",
             }}
             onClick={() => setSelectedProjectsSuboptionMobile("twitter")}
