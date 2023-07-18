@@ -12,14 +12,13 @@
   margin-top: -50px;
   z-index: 10;
   position: relative;
-  background: linear-gradient(
+  /* background: linear-gradient(
     181.79deg,
     rgba(236, 232, 229, 0.29) 28.51%,
     rgba(237, 232, 228) 73.46%
-  );
+  ); */
 }
 
 .horizontal-line {
-  border: 1px solid #dddddd;
   width: 100%;
 }

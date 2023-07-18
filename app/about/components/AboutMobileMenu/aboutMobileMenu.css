@@ -14,7 +14,6 @@
 
 .active {
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0px 4.45674px 8.91347px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(27.8546px);
   font-weight: 500;
@@ -40,7 +39,7 @@
 }
 .sub-option-container {
   font-weight: 300;
-  color: #9b9b9b;
+  /* color: #9b9b9b; */
   cursor: pointer;
   width: auto;
   text-align: center;
@@ -58,7 +57,5 @@
   border-radius: 50px;
   font-weight: 500;
   cursor: default;
-
-  background: rgba(255, 255, 255, 0.4);
   border-radius: 50px;
 }

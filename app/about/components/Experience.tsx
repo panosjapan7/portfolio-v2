@@ -1,24 +1,57 @@
 import "./experience.css";
 
-const Experience = () => {
+const Experience = ({ isDay }: { isDay: boolean }) => {
   return (
     <div className="max-w-xl md3:p-5">
-      <h2 className="font-semibold text-lg">Experience</h2>
-      <div className="horizontal-line"></div>
+      <h2
+        className={`font-semibold text-lg ${
+          isDay ? "text-black" : "text-slate-100"
+        } `}
+      >
+        Experience
+      </h2>
+      <div
+        className="horizontal-line"
+        style={{
+          border: `1px solid ${isDay ? "#dddddd" : "#ededed"} `,
+        }}
+      ></div>
       <div className="content-wrapper">
         <div style={{ height: "100%" }} className="mb-6 mt-4 pr-3 pl-2">
-          <h3 className="font-medium text-lg">Moveat</h3>
-          <p className="text-slate-600 text-sm tracking-wide">
+          <h3
+            className={`font-medium text-lg ${
+              isDay ? "text-black" : "text-slate-100"
+            } `}
+          >
+            Moveat
+          </h3>
+          <p
+            className={`text-sm tracking-wide ${
+              isDay ? "text-gray-600" : "text-gray-200"
+            } `}
+          >
             Dec. 2022 - May 2023
           </p>
-          <p className=" italic text-sm mb-3" style={{ color: "#646464" }}>
+          <p
+            className={`italic text-sm mb-3 ${
+              isDay ? "text-gray-600" : "text-gray-200"
+            } `}
+          >
             Frontend Web Developer
           </p>
-          <p className="font-light mb-2 leading-5">
+          <p
+            className={`font-light mb-2 leading-5 ${
+              isDay ? "text-black" : "text-white"
+            }`}
+          >
             <span className="font-medium">Moveat</span> is a multi-platform app
             selling taste tour tickets in Scandinavia.
           </p>
-          <p className="font-light mb-2 leading-5">
+          <p
+            className={`font-light mb-2 leading-5 ${
+              isDay ? "text-black" : "text-white"
+            }`}
+          >
             Using{" "}
             <span className="italic text-sm font-medium">
               React, React Native,
@@ -35,7 +68,11 @@ const Experience = () => {
             and <span className="italic text-sm font-medium">drag & drop</span>{" "}
             functionality.
           </p>
-          <p className="font-light mb-2 leading-5">
+          <p
+            className={`font-light mb-2 leading-5 ${
+              isDay ? "text-black" : "text-white"
+            }`}
+          >
             <span className="italic text-sm font-medium">Node</span> was used
             for backend connectivity and{" "}
             <span className="italic text-sm font-medium">Firebase</span> for
@@ -43,14 +80,32 @@ const Experience = () => {
           </p>
         </div>
         <div style={{ height: "100%" }} className="mb-5 pr-3 pl-2">
-          <h3 className="font-medium text-lg">Redmind internship</h3>
-          <p className="text-slate-600 text-sm tracking-wide">
+          <h3
+            className={`font-medium text-lg ${
+              isDay ? "text-black" : "text-slate-100"
+            } `}
+          >
+            Redmind internship
+          </h3>
+          <p
+            className={`text-sm tracking-wide ${
+              isDay ? "text-gray-600" : "text-gray-200"
+            } `}
+          >
             Nov. 2022 - May 2023
           </p>
-          <p className=" italic text-sm mb-3" style={{ color: "#646464" }}>
+          <p
+            className={`italic text-sm mb-3 ${
+              isDay ? "text-gray-600" : "text-gray-200"
+            } `}
+          >
             Frontend Web Developer
           </p>
-          <p className="font-light mb-2 leading-5">
+          <p
+            className={`font-light mb-2 leading-5 ${
+              isDay ? "text-black" : "text-white"
+            }`}
+          >
             At <span className="font-medium">Redmind</span>, I served as mainly
             a frontend developer, collaborating closely with the design team to
             transform their{" "}
@@ -59,7 +114,11 @@ const Experience = () => {
             <span className="italic text-sm font-medium">ReactJS</span> and{" "}
             <span className="italic text-sm font-medium">React Native</span>.
           </p>
-          <p className="font-light mb-2 leading-5">
+          <p
+            className={`font-light mb-2 leading-5 ${
+              isDay ? "text-black" : "text-white"
+            }`}
+          >
             In addition, I built interactive features for web and mobile apps
             that required coding backend infrastructure using{" "}
             <span className="italic text-sm font-medium">Node</span> and{" "}
@@ -67,29 +126,62 @@ const Experience = () => {
           </p>
         </div>
         <div style={{ height: "100%" }} className="pr-3 pl-2 pb-10">
-          <h3 className="font-medium text-lg">SVØRN</h3>
-          <p className="text-slate-600 text-sm tracking-wide">
+          <h3
+            className={`font-medium text-lg ${
+              isDay ? "text-black" : "text-slate-100"
+            } `}
+          >
+            SVØRN
+          </h3>
+          <p
+            className={`text-sm tracking-wide ${
+              isDay ? "text-gray-600" : "text-gray-200"
+            } `}
+          >
             Apr. 2014 - Dec. 2021
           </p>
-          <p className=" italic text-sm mb-3" style={{ color: "#646464" }}>
+          <p
+            className={`italic text-sm mb-3 ${
+              isDay ? "text-gray-600" : "text-gray-200"
+            } `}
+          >
             Self-employed
           </p>
-          <p className="font-light mb-2 leading-5">
+          <p
+            className={`font-light mb-2 leading-5 ${
+              isDay ? "text-black" : "text-white"
+            }`}
+          >
             As a self-employed entrepreneur, I successfully ran a men&apos;s
             luxury fashion accessories business.
           </p>
-          <p className="font-light mb-2 leading-5">
+          <p
+            className={`font-light mb-2 leading-5 ${
+              isDay ? "text-black" : "text-white"
+            }`}
+          >
             I utilized D2C and B2B sales, effective marketing, and oversaw
             manufacturing, design collaboration, and team assembly.
           </p>
-          <p className="font-light mb-2 leading-5">
+          <p
+            className={`font-light mb-2 leading-5 ${
+              isDay ? "text-black" : "text-white"
+            }`}
+          >
             I also created website mockups and marketing materials using{" "}
             <span className="italic text-sm font-medium">Photoshop</span> and{" "}
             <span className="italic text-sm font-medium">InDesign</span>.
           </p>
         </div>
       </div>
-      <div className="fade-div"></div>
+      {/* <div
+        className="fade-div"
+        style={{
+          background: isDay
+            ? "linear-gradient(181.79deg,rgba(236, 232, 229, 0.29) 28.51%, rgba(237, 232, 228) 73.46%)"
+            : "linear-gradient(181.79deg, rgba(189, 190, 194, 0.5) 28.51%, rgba(196, 197, 200, 1) 100%)",
+        }}
+      ></div> */}
     </div>
   );
 };
