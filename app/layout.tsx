@@ -28,14 +28,15 @@ export default function RootLayout({
   moment.tz.setDefault("Europe/Stockholm");
   const currentHour = moment().format("HH");
   let isDay = false;
-  // if (+currentHour > 6 && +currentHour < 20) {
-  //   isDay = true;
-  // }
+  if (+currentHour > 6 && +currentHour < 20) {
+    isDay = true;
+  }
 
   const skyBackground: string = "sunny-day";
   const backgroundWeatherGradients: string[] = [
     "linear-gradient(180deg, rgba(196, 208, 232, 0.6) 0%, rgba(232, 218, 205, 0.6) 100%)",
     "linear-gradient(180deg, rgba(7, 22, 55, 0.6) 0%, rgba(185, 185, 185, 0.6) 100%)",
+    "linear-gradient(180deg, rgba(5, 4, 16, 1) 0%, rgba(29, 29, 59, 0.6) 70%)",
     "bg-gradient-to-b from-sunny-day-blue to-sunny-day-red",
   ];
   let background = "";
@@ -43,7 +44,7 @@ export default function RootLayout({
     background = backgroundWeatherGradients[0];
   }
   if (!isDay) {
-    background = backgroundWeatherGradients[1];
+    background = backgroundWeatherGradients[2];
   }
 
   return (
