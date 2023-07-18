@@ -23,7 +23,6 @@ const ProjectItem: React.FC<ProjectItem> = ({
   link,
   isDay,
 }) => {
-  console.log(isDay);
   return (
     <div className="max-w-xl z-20" style={{ zIndex: 30, position: "relative" }}>
       <div className="mb-5 max-w-xl">
