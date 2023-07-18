@@ -27,21 +27,21 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </h3>
           <p
             className={`text-sm tracking-wide ${
-              isDay ? "text-slate-600" : "text-gray-300"
+              isDay ? "text-slate-600" : "text-gray-200"
             } `}
           >
             Dec. 2022 - May 2023
           </p>
           <p
             className={`italic text-sm mb-3 ${
-              isDay ? "text-slate-500" : "text-gray-300"
+              isDay ? "text-slate-500" : "text-gray-200"
             } `}
           >
             Frontend Web Developer
           </p>
           <p
             className={`font-light mb-2 leading-5 ${
-              isDay ? "text-black" : "text-gray-200"
+              isDay ? "text-black" : "text-white"
             }`}
           >
             <span className="font-medium">Moveat</span> is a multi-platform app
@@ -49,7 +49,7 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </p>
           <p
             className={`font-light mb-2 leading-5 ${
-              isDay ? "text-black" : "text-gray-200"
+              isDay ? "text-black" : "text-white"
             }`}
           >
             Using{" "}
@@ -70,7 +70,7 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </p>
           <p
             className={`font-light mb-2 leading-5 ${
-              isDay ? "text-black" : "text-gray-200"
+              isDay ? "text-black" : "text-white"
             }`}
           >
             <span className="italic text-sm font-medium">Node</span> was used
@@ -89,21 +89,21 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </h3>
           <p
             className={`text-sm tracking-wide ${
-              isDay ? "text-slate-600" : "text-gray-300"
+              isDay ? "text-slate-600" : "text-gray-200"
             } `}
           >
             Nov. 2022 - May 2023
           </p>
           <p
             className={`italic text-sm mb-3 ${
-              isDay ? "text-slate-500" : "text-gray-300"
+              isDay ? "text-slate-500" : "text-gray-200"
             } `}
           >
             Frontend Web Developer
           </p>
           <p
             className={`font-light mb-2 leading-5 ${
-              isDay ? "text-black" : "text-gray-200"
+              isDay ? "text-black" : "text-white"
             }`}
           >
             At <span className="font-medium">Redmind</span>, I served as mainly
@@ -116,7 +116,7 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </p>
           <p
             className={`font-light mb-2 leading-5 ${
-              isDay ? "text-black" : "text-gray-200"
+              isDay ? "text-black" : "text-white"
             }`}
           >
             In addition, I built interactive features for web and mobile apps
@@ -135,21 +135,21 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </h3>
           <p
             className={`text-sm tracking-wide ${
-              isDay ? "text-slate-600" : "text-gray-300"
+              isDay ? "text-slate-600" : "text-gray-200"
             } `}
           >
             Apr. 2014 - Dec. 2021
           </p>
           <p
             className={`italic text-sm mb-3 ${
-              isDay ? "text-slate-500" : "text-gray-300"
+              isDay ? "text-slate-500" : "text-gray-200"
             } `}
           >
             Self-employed
           </p>
           <p
             className={`font-light mb-2 leading-5 ${
-              isDay ? "text-black" : "text-gray-200"
+              isDay ? "text-black" : "text-white"
             }`}
           >
             As a self-employed entrepreneur, I successfully ran a men&apos;s
@@ -157,7 +157,7 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </p>
           <p
             className={`font-light mb-2 leading-5 ${
-              isDay ? "text-black" : "text-gray-200"
+              isDay ? "text-black" : "text-white"
             }`}
           >
             I utilized D2C and B2B sales, effective marketing, and oversaw
@@ -165,7 +165,7 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </p>
           <p
             className={`font-light mb-2 leading-5 ${
-              isDay ? "text-black" : "text-gray-200"
+              isDay ? "text-black" : "text-white"
             }`}
           >
             I also created website mockups and marketing materials using{" "}

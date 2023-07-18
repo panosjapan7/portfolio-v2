@@ -72,8 +72,9 @@ const AboutMe = ({ isDay }: { isDay: boolean }) => {
             2021-2023
           </p>
           <p
-            className=" italic text-sm mb-3"
-            style={{ color: `${isDay ? "#646464" : "#e8e8e8"}` }}
+            className={`italic text-sm mb-3 ${
+              isDay ? "text-slate-600" : "text-slate-200"
+            }`}
           >
             Web Developer Fullstack Open Source
           </p>
