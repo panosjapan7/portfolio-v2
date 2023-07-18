@@ -307,7 +307,7 @@ const TechnicalSkills = ({ isDay }: { isDay: boolean }) => {
           </div>
         </div>
       </div>
-      <div className="fade-block"></div>
+      {/* <div className="fade-block"></div> */}
     </div>
   );
 };

@@ -41,7 +41,7 @@ const ProjectMern = ({ isDay }: { isDay: boolean }) => {
           }}
         />
       </div>
-      <div className="fade-block"></div>
+      {/* <div className="fade-block"></div> */}
     </div>
   );
 };

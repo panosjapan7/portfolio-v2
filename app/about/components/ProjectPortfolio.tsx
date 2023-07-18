@@ -26,7 +26,7 @@ const ProjectPortfolio = ({ isDay }: { isDay: boolean }) => {
         />
         <div className="sun-background"></div>
       </div>
-      <div className="fade-block"></div>
+      {/* <div className="fade-block"></div> */}
     </div>
   );
 };

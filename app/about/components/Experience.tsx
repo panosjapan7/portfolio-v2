@@ -174,14 +174,14 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </p>
         </div>
       </div>
-      <div
+      {/* <div
         className="fade-div"
         style={{
           background: isDay
             ? "linear-gradient(181.79deg,rgba(236, 232, 229, 0.29) 28.51%, rgba(237, 232, 228) 73.46%)"
             : "linear-gradient(181.79deg, rgba(189, 190, 194, 0.5) 28.51%, rgba(196, 197, 200, 1) 100%)",
         }}
-      ></div>
+      ></div> */}
     </div>
   );
 };

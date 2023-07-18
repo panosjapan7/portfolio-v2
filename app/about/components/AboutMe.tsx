@@ -118,7 +118,7 @@ const AboutMe = ({ isDay }: { isDay: boolean }) => {
           </p>
         </div>
       </div>
-      <div className="fade-block"></div>
+      {/* <div className="fade-block"></div> */}
     </div>
   );
 };
