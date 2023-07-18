@@ -8,9 +8,9 @@ export default function Home() {
   moment.tz.setDefault("Europe/Stockholm");
   const currentHour = moment().format("HH");
   let isDay = false;
-  // if (+currentHour > 6 && +currentHour < 20) {
-  //   isDay = true;
-  // }
+  if (+currentHour > 6 && +currentHour < 20) {
+    isDay = true;
+  }
 
   return (
     <main>
