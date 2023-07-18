@@ -14,6 +14,7 @@ interface MobileMenu {
   setSelectedProjectsSuboptionMobile: (
     selectedProjectsSuboptionMobile: string
   ) => void;
+  isDay: boolean;
 }
 
 const AboutMobileMenu: React.FC<MobileMenu> = ({
@@ -23,15 +24,28 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
   setSelectedAboutSuboptionMobile,
   selectedProjectsSuboptionMobile,
   setSelectedProjectsSuboptionMobile,
+  isDay,
 }) => {
+  const containerClassNameAbout = `option-container ${
+    selectedTabMobile === "about-me" ? "active" : ""
+  }`;
+  const containerClassNameProjects = `option-container ${
+    selectedTabMobile === "projects" ? "active" : ""
+  }`;
+
   return (
     <div className="ml-6 mr-3">
       <div className="flex">
         <div className="flex gap-3 flex-wrap">
           <div
-            className={`option-container ${
-              selectedTabMobile === "about-me" ? "active" : ""
-            }`}
+            className={containerClassNameAbout}
+            style={{
+              background: containerClassNameAbout.includes("active")
+                ? isDay
+                  ? "rgba(255, 255, 255, 0.1)"
+                  : "rgba(108, 108, 108, 0.5)"
+                : "unset",
+            }}
             onClick={() => setSelectedTabMobile("about-me")}
           >
             <FaUser
@@ -39,17 +53,25 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
                 height: "16px",
                 width: "16px",
                 marginTop: -4,
-                color: "#9B9B9B",
+                color: isDay ? "#9B9B9B" : "white",
               }}
             />
-            <h2 className="text-base" style={{ color: "#9B9B9B" }}>
+            <h2
+              className="text-base"
+              style={{ color: isDay ? "#9B9B9B" : "white" }}
+            >
               About Me
             </h2>
           </div>
           <div
-            className={`option-container ${
-              selectedTabMobile === "projects" ? "active" : ""
-            }`}
+            className={containerClassNameProjects}
+            style={{
+              background: containerClassNameProjects.includes("active")
+                ? isDay
+                  ? "rgba(255, 255, 255, 0.1)"
+                  : "rgba(108, 108, 108, 0.5)"
+                : "unset",
+            }}
             onClick={() => setSelectedTabMobile("projects")}
           >
             <IoDocumentsOutline
@@ -57,10 +79,13 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
                 height: "18px",
                 width: "18px",
                 marginTop: 0,
-                color: "#9B9B9B",
+                color: isDay ? "#9B9B9B" : "white",
               }}
             />
-            <h2 className="text-base" style={{ color: "#9B9B9B" }}>
+            <h2
+              className="text-base"
+              style={{ color: isDay ? "#9B9B9B" : "white" }}
+            >
               Projects
             </h2>
           </div>
