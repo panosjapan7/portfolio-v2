@@ -27,14 +27,14 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </h3>
           <p
             className={`text-sm tracking-wide ${
-              isDay ? "text-slate-600" : "text-gray-200"
+              isDay ? "text-gray-600" : "text-gray-200"
             } `}
           >
             Dec. 2022 - May 2023
           </p>
           <p
             className={`italic text-sm mb-3 ${
-              isDay ? "text-slate-500" : "text-gray-200"
+              isDay ? "text-gray-600" : "text-gray-200"
             } `}
           >
             Frontend Web Developer
@@ -89,14 +89,14 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </h3>
           <p
             className={`text-sm tracking-wide ${
-              isDay ? "text-slate-600" : "text-gray-200"
+              isDay ? "text-gray-600" : "text-gray-200"
             } `}
           >
             Nov. 2022 - May 2023
           </p>
           <p
             className={`italic text-sm mb-3 ${
-              isDay ? "text-slate-500" : "text-gray-200"
+              isDay ? "text-gray-600" : "text-gray-200"
             } `}
           >
             Frontend Web Developer
@@ -135,14 +135,14 @@ const Experience = ({ isDay }: { isDay: boolean }) => {
           </h3>
           <p
             className={`text-sm tracking-wide ${
-              isDay ? "text-slate-600" : "text-gray-200"
+              isDay ? "text-gray-600" : "text-gray-200"
             } `}
           >
             Apr. 2014 - Dec. 2021
           </p>
           <p
             className={`italic text-sm mb-3 ${
-              isDay ? "text-slate-500" : "text-gray-200"
+              isDay ? "text-gray-600" : "text-gray-200"
             } `}
           >
             Self-employed

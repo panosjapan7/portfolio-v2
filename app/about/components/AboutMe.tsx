@@ -66,14 +66,14 @@ const AboutMe = ({ isDay }: { isDay: boolean }) => {
           </p>
           <p
             className={`text-sm tracking-wide ${
-              isDay ? "text-slate-600" : "text-slate-200"
+              isDay ? "text-gray-600" : "text-slate-200"
             }`}
           >
             2021-2023
           </p>
           <p
             className={`italic text-sm mb-3 ${
-              isDay ? "text-slate-600" : "text-slate-200"
+              isDay ? "text-gray-600" : "text-slate-200"
             }`}
           >
             Web Developer Fullstack Open Source
