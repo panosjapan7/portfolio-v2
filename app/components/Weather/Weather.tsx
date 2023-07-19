@@ -1,6 +1,6 @@
 import moment from "moment";
 import "moment-timezone";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./weather.css";
 import Thunderstorm from "./conditions/Thunderstorm";
 import Clear from "./conditions/Clear";
@@ -32,7 +32,6 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
     let capitalizedDescription = "";
 
     if (data) {
-      console.log({ data });
       capitalizedDescription = data.weather[0].description
         .split(" ")
         .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))

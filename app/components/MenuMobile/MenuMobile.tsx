@@ -96,10 +96,7 @@ const MenuMobile = ({ isDay }: { isDay: boolean }) => {
           </div>
         </li>
 
-        <li
-          className="ms-main"
-          // style={{ border: `2px solid ${isDay ? "#b8b7b7" : "#efefef"}` }}
-        >
+        <li className="ms-main">
           <a>
             <label
               className="ms-menu-toggle-lbl"
