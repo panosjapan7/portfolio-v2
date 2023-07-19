@@ -5,9 +5,9 @@
   left: calc(50% - 201px / 2 + 0.5px);
   bottom: 678px;
 
-  background: #ffc43f;
+  /* background: #ffc43f;
   opacity: 0.77;
-  filter: blur(50px);
+  filter: blur(50px); */
   margin-bottom: 100px;
 }
 
