@@ -44,8 +44,8 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
       description: capitalizedDescription,
       mainCondition: data.weather[0].main,
     });
-
-    setWeatherImage(data.weather[0].main);
+    setWeatherImage("Snow");
+    // setWeatherImage(data.weather[0].main);
     setLoading(false);
   };
 
