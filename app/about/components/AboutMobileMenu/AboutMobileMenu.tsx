@@ -228,7 +228,7 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               MERN + Firebase Auth
             </h3>
           </div>
-          <div
+          {/* <div
             className={projectsSuboptionsContainerClassName("twitter")}
             style={{
               background: projectsSuboptionsContainerClassName(
@@ -247,7 +247,7 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
             >
               Twitter Feed
             </h3>
-          </div>
+          </div> */}
         </div>
       )}
     </div>

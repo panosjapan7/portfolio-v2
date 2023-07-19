@@ -124,7 +124,7 @@ const AboutPage = () => {
                 imageHeight={22}
                 isDay={isDay}
               />
-              <div
+              {/* <div
                 className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3 rounded-lg ${
                   selectedTab === "twitter"
                     ? "cursor-default " +
@@ -148,7 +148,7 @@ const AboutPage = () => {
                 >
                   Twitter Feed
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="row-span-3 col-span-3">
