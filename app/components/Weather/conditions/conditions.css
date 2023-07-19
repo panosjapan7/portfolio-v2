@@ -103,3 +103,13 @@
   height: auto;
   color: #827d7d;
 }
+
+.snow-container {
+  filter: blur(2px);
+  margin-bottom: 60px;
+}
+.snow {
+  width: 230px;
+  height: auto;
+  color: #f6f6f6;
+}

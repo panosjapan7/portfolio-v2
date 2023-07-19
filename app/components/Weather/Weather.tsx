@@ -7,6 +7,7 @@ import Clear from "./conditions/Clear";
 import Clouds from "./conditions/Clouds";
 import Drizzle from "./conditions/Drizzle";
 import Rain from "./conditions/Rain";
+import Snow from "./conditions/Snow";
 
 interface Weather {
   temp: number;
@@ -44,8 +45,7 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
       mainCondition: data.weather[0].main,
     });
 
-    setWeatherImage("Rain");
-    // setWeatherImage(data.weather[0].main);
+    setWeatherImage(data.weather[0].main);
     setLoading(false);
   };
 
@@ -57,6 +57,7 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
     else if (mainCondition === "Clouds") setWeatherIcon(<Clouds />);
     else if (mainCondition === "Drizzle") setWeatherIcon(<Drizzle />);
     else if (mainCondition === "Rain") setWeatherIcon(<Rain />);
+    else if (mainCondition === "Snow") setWeatherIcon(<Snow />);
     else setWeatherIcon(<Clear />);
   };
 
