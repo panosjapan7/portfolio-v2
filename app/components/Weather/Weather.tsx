@@ -67,7 +67,7 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
 
   return (
     <>
-      <div className="weather-container flex justify-center text-center">
+      <div className="weather-container flex justify-center text-center lg:pt-8">
         {!loading ? (
           <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
             {isDay ? (
