@@ -9,7 +9,6 @@ const Clear: React.FC = () => {
         alt="sun icon"
         width={350}
         height={350}
-        // className="sun-container"
         style={{ display: "block", fontSize: 0 }}
       />
       {/* <div className="sun-container"></div>; */}

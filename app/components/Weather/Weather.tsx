@@ -45,8 +45,7 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
       mainCondition: data.weather[0].main,
     });
 
-    setWeatherImage("Clear");
-    // setWeatherImage(data.weather[0].main);
+    setWeatherImage(data.weather[0].main);
     setLoading(false);
   };
 
