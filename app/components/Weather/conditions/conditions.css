@@ -126,12 +126,42 @@
 }
 @media (max-width: 640px) {
   .sun-container {
-    width: 151px;
-    height: 151px;
+    width: 181px;
+    height: 181px;
+    margin-top: 20px;
+  }
+
+  .rain {
+    width: 210px;
   }
 }
 @media (max-width: 540px) {
   .sun-container {
     margin-top: 40px;
+  }
+
+  .clouds-container {
+    width: 300px;
+    height: 300px;
+    margin-top: -60px;
+    margin-bottom: 40px;
+  }
+  .clouds-one {
+    width: 220px;
+    height: 220px;
+    left: -30px;
+    bottom: -12px;
+  }
+  .clouds-two {
+    width: 260px;
+    height: 260px;
+    left: 60px;
+    bottom: -10px;
+  }
+
+  .drizzle {
+    width: 280px;
+    height: auto;
+    color: #827d7d;
   }
 }
