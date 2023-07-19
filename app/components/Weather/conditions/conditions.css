@@ -82,3 +82,14 @@
   left: 70px;
   bottom: -10px;
 }
+
+.drizzle-container {
+  filter: blur(2px);
+  margin-bottom: 20px;
+}
+
+.drizzle {
+  width: 300px;
+  height: auto;
+  color: #827d7d;
+}

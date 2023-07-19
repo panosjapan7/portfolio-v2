@@ -5,6 +5,7 @@ import "./weather.css";
 import Thunderstorm from "./conditions/Thunderstorm";
 import Clear from "./conditions/Clear";
 import Clouds from "./conditions/Clouds";
+import Drizzle from "./conditions/Drizzle";
 
 interface Weather {
   temp: number;
@@ -52,6 +53,7 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
     } else if (mainCondition === "Thunderstorm")
       setWeatherIcon(<Thunderstorm />);
     else if (mainCondition === "Clouds") setWeatherIcon(<Clouds />);
+    else if (mainCondition === "Drizzle") setWeatherIcon(<Drizzle />);
     else setWeatherIcon(<Clear />);
   };
 
@@ -65,10 +67,8 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
         {!loading ? (
           <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
             {isDay ? (
-              // <Thunderstorm />
               <>{weatherIcon}</>
             ) : (
-              // <Clear />
               <div className="moon-container"></div>
             )}
 
