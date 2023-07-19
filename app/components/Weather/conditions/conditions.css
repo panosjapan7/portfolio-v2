@@ -93,3 +93,13 @@
   height: auto;
   color: #827d7d;
 }
+
+.rain-container {
+  filter: blur(3px);
+  margin-bottom: 60px;
+}
+.rain {
+  width: 230px;
+  height: auto;
+  color: #827d7d;
+}
