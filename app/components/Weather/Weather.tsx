@@ -32,6 +32,7 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
     let capitalizedDescription = "";
 
     if (data) {
+      console.log({ data });
       capitalizedDescription = data.weather[0].description
         .split(" ")
         .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -44,7 +45,8 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
       mainCondition: data.weather[0].main,
     });
 
-    setWeatherImage(data.weather[0].main);
+    setWeatherImage("Clear");
+    // setWeatherImage(data.weather[0].main);
     setLoading(false);
   };
 
