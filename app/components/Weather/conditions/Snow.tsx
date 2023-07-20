@@ -1,10 +1,14 @@
-import "./conditions.css";
-import { FaSnowflake } from "react-icons/fa";
+import Image from "next/image";
 
 const Snow = () => {
   return (
-    <div className="snow-container">
-      <FaSnowflake className="snow" />
+    <div>
+      <Image
+        src={"/images/new/snow-new.png"}
+        width={120}
+        height={120}
+        alt="snow icon"
+      />
     </div>
   );
 };
