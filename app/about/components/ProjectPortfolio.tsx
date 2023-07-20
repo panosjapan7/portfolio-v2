@@ -23,7 +23,6 @@ const ProjectPortfolio = () => {
           }
           github="https://github.com/panosjapan7/portfolio-v2"
         />
-        <div className="sun-background"></div>
       </div>
       {/* <div className="fade-block"></div> */}
     </div>

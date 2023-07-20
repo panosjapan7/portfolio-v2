@@ -23,22 +23,6 @@ const ProjectMern = () => {
           backend="Firebase Auth, MongoDB, Node JS, TypeScript"
           github="https://github.com/panosjapan7/mern-firebase-auth"
         />
-        <Image
-          src="/images/mern-bg.svg"
-          width={500}
-          height={500}
-          alt=""
-          style={{
-            position: "absolute",
-            opacity: 0.4,
-            top: "50%",
-            left: 0,
-            right: "15%",
-            margin: "auto",
-            transform: "translateY(-50%)",
-            textAlign: "center",
-          }}
-        />
       </div>
       {/* <div className="fade-block"></div> */}
     </div>
