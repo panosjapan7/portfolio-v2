@@ -35,16 +35,14 @@ export default function RootLayout({
   const skyBackground: string = "sunny-day";
   const backgroundWeatherGradients: string[] = [
     "linear-gradient(180deg, rgba(196, 208, 232, 0.6) 0%, rgba(232, 218, 205, 0.6) 100%)",
-    "linear-gradient(180deg, rgba(7, 22, 55, 0.6) 0%, rgba(185, 185, 185, 0.6) 100%)",
     "linear-gradient(180deg, rgba(5, 4, 16, 1) 0%, rgba(29, 29, 59, 0.6) 70%)",
-    "bg-gradient-to-b from-sunny-day-blue to-sunny-day-red",
   ];
   let background = "";
   if (isDay) {
     background = backgroundWeatherGradients[0];
   }
   if (!isDay) {
-    background = backgroundWeatherGradients[2];
+    background = backgroundWeatherGradients[1];
   }
 
   return (
