@@ -14,7 +14,7 @@ const Experience = () => {
               }}
             ></div>
           </div>
-          <div className="md3:pr-3 pr-3 pl-2">
+          <div className="md3:pr-3 pr-3 pl-2 mb-6">
             <h3 className="font-medium text-lg text-black">Moveat</h3>
             <p className="text-sm tracking-wide text-gray-600">
               Dec. 2022 - May 2023
@@ -62,7 +62,7 @@ const Experience = () => {
               database.
             </p>
           </div>
-          <div className="md3:pr-3 pr-3 pl-2">
+          <div className="md3:pr-3 pr-3 pl-2 mb-6">
             <h3 className="font-medium text-lg text-black">
               Redmind internship
             </h3>
