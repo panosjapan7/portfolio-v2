@@ -37,6 +37,7 @@
 .sub-options-container {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .sub-option-container {
   font-weight: 300;
