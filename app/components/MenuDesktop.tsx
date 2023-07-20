@@ -72,7 +72,7 @@ function AppIcon({
   const handleClick = () => {
     onClick();
   };
-
+  console.log({ active });
   return (
     <motion.div
       ref={ref}
@@ -92,9 +92,10 @@ function AppIcon({
         <div
           style={{
             borderRadius: "50%",
-            border: active ? `2px solid  "#b8b7b7"` : "none",
+            border: active ? "2px solid  #b8b7b7" : "none",
             padding: 14,
           }}
+          onClick={() => console.log("Clicked")}
         >
           <IconComponent
             style={{
