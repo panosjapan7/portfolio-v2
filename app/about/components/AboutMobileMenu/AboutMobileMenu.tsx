@@ -24,54 +24,14 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
   selectedProjectsSuboptionMobile,
   setSelectedProjectsSuboptionMobile,
 }) => {
-  const containerClassNameAbout = `option-container ${
-    selectedTabMobile === "about-me" ? "active" : ""
-  }`;
-  const containerClassNameProjects = `option-container ${
-    selectedTabMobile === "projects" ? "active" : ""
-  }`;
-
-  const suboptionContainerClassname = `sub-option-container ${
-    selectedAboutSuboptionMobile === "about-me" ? "sub-option-active" : ""
-  }`;
-
-  const suboptions = [
-    "about-me",
-    "tech-skills",
-    "experience",
-    "portfolio-website",
-    "mern",
-    "twitter",
-  ];
-
-  const aboutSuboptionsContainerClassName = (suboption: string) => {
-    return `sub-option-container ${
-      selectedAboutSuboptionMobile === suboption ? "sub-option-active" : ""
-    }`;
-  };
-
-  const projectsSuboptionsContainerClassName = (suboption: string) => {
-    return `sub-option-container ${
-      selectedProjectsSuboptionMobile === suboption ? "sub-option-active" : ""
-    }`;
-  };
-
   return (
     <div className="ml-6 mr-3">
       <div className="flex">
         <div className="flex gap-3 flex-wrap">
           <div
-            // className={containerClassNameAbout}
             className={`option-container ${
               selectedTabMobile === "about-me" ? "active" : ""
             }`}
-            // style={{
-            //   background: containerClassNameAbout.includes("active")
-            //     ? isDay
-            //       ? "rgba(255, 255, 255, 0.1)"
-            //       : "rgba(108, 108, 108, 0.5)"
-            //     : "unset",
-            // }}
             onClick={() => setSelectedTabMobile("about-me")}
           >
             <FaUser
@@ -87,17 +47,9 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
             </h2>
           </div>
           <div
-            // className={containerClassNameProjects}
             className={`option-container ${
               selectedTabMobile === "projects" ? "active" : ""
             }`}
-            // style={{
-            //   background: containerClassNameProjects.includes("active")
-            //     ? isDay
-            //       ? "rgba(255, 255, 255, 0.1)"
-            //       : "rgba(108, 108, 108, 0.5)"
-            //     : "unset",
-            // }}
             onClick={() => setSelectedTabMobile("projects")}
           >
             <IoDocumentsOutline
@@ -123,16 +75,6 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
                 ? "sub-option-active"
                 : ""
             }`}
-            // className={aboutSuboptionsContainerClassName("about-me")}
-            // style={{
-            //   background: aboutSuboptionsContainerClassName(
-            //     "about-me"
-            //   ).includes("sub-option-active")
-            //     ? isDay
-            //       ? "rgba(255, 255, 255, 0.4)"
-            //       : "rgba(110, 108, 108, 0.8)"
-            //     : "unset",
-            // }}
             onClick={() => setSelectedAboutSuboptionMobile("about-me")}
           >
             <h3 className="text-sm" style={{ color: "#9b9b9b" }}>
@@ -145,16 +87,6 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
                 ? "sub-option-active"
                 : ""
             }`}
-            // className={aboutSuboptionsContainerClassName("tech-skills")}
-            // style={{
-            //   background: aboutSuboptionsContainerClassName(
-            //     "tech-skills"
-            //   ).includes("sub-option-active")
-            //     ? isDay
-            //       ? "rgba(255, 255, 255, 0.4)"
-            //       : "rgba(110, 108, 108, 0.8)"
-            //     : "unset",
-            // }}
             onClick={() => setSelectedAboutSuboptionMobile("tech-skills")}
           >
             <h3 className="text-sm" style={{ color: "#9b9b9b" }}>
@@ -167,16 +99,6 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
                 ? "sub-option-active"
                 : ""
             }`}
-            // className={aboutSuboptionsContainerClassName("experience")}
-            // style={{
-            //   background: aboutSuboptionsContainerClassName(
-            //     "experience"
-            //   ).includes("sub-option-active")
-            //     ? isDay
-            //       ? "rgba(255, 255, 255, 0.4)"
-            //       : "rgba(110, 108, 108, 0.8)"
-            //     : "unset",
-            // }}
             onClick={() => setSelectedAboutSuboptionMobile("experience")}
           >
             <h3 className="text-sm" style={{ color: "#9b9b9b" }}>
@@ -194,18 +116,6 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
                 ? "sub-option-active"
                 : ""
             }`}
-            // className={projectsSuboptionsContainerClassName(
-            //   "portfolio-website"
-            // )}
-            // style={{
-            //   background: projectsSuboptionsContainerClassName(
-            //     "portfolio-website"
-            //   ).includes("sub-option-active")
-            //     ? isDay
-            //       ? "rgba(255, 255, 255, 0.4)"
-            //       : "rgba(110, 108, 108, 0.8)"
-            //     : "unset",
-            // }}
             onClick={() =>
               setSelectedProjectsSuboptionMobile("portfolio-website")
             }
@@ -220,16 +130,6 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
                 ? "sub-option-active"
                 : ""
             }`}
-            // className={projectsSuboptionsContainerClassName("mern")}
-            // style={{
-            //   background: projectsSuboptionsContainerClassName("mern").includes(
-            //     "sub-option-active"
-            //   )
-            //     ? isDay
-            //       ? "rgba(255, 255, 255, 0.4)"
-            //       : "rgba(110, 108, 108, 0.8)"
-            //     : "unset",
-            // }}
             onClick={() => setSelectedProjectsSuboptionMobile("mern")}
           >
             <h3 className="text-sm" style={{ color: "#9b9b9b" }}>
@@ -237,22 +137,14 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
             </h3>
           </div>
           {/* <div
-            className={projectsSuboptionsContainerClassName("twitter")}
-            style={{
-              background: projectsSuboptionsContainerClassName(
-                "twitter"
-              ).includes("sub-option-active")
-                ? isDay
-                  ? "rgba(255, 255, 255, 0.4)"
-                  : "rgba(110, 108, 108, 0.8)"
-                : "unset",
-            }}
+            className={`sub-option-container ${
+              selectedProjectsSuboptionMobile === "twitter"
+                ? "sub-option-active"
+                : ""
+            }`}
             onClick={() => setSelectedProjectsSuboptionMobile("twitter")}
           >
-            <h3
-              className="text-sm"
-              style={{ color: isDay ? "#9b9b9b" : "white" }}
-            >
+            <h3 className="text-sm" style={{ color: "#9b9b9b" }}>
               Twitter Feed
             </h3>
           </div> */}
