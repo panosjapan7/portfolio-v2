@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { BsFillCloudRainHeavyFill } from "react-icons/bs";
-import "./conditions.css";
 
 const Rain: React.FC = () => {
   return (
@@ -9,7 +7,7 @@ const Rain: React.FC = () => {
         src={"/images/new/rain-new.png"}
         width={120}
         height={120}
-        alt="clouds"
+        alt="rain icon"
       />
     </div>
   );

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { AiFillThunderbolt, AiFillCloud } from "react-icons/ai";
-import "./conditions.css";
 
 const Thunderstorm: React.FC = () => {
   return (

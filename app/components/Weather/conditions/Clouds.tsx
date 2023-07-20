@@ -7,7 +7,7 @@ const Clouds: React.FC = () => {
         src={"/images/new/clouds-new.png"}
         width={120}
         height={120}
-        alt="clouds"
+        alt="clouds icon"
       />
     </div>
   );
