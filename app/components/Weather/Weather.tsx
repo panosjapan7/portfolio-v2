@@ -45,8 +45,7 @@ const Weather = () => {
       mainCondition: data.weather[0].main,
     });
 
-    setWeatherImage("Drizzle");
-    // setWeatherImage(data.weather[0].main);
+    setWeatherImage(data.weather[0].main);
     setLoading(false);
   };
 
@@ -68,44 +67,42 @@ const Weather = () => {
 
   return (
     <div className="weather-wrapper">
-      <div className="weather-container flex justify-center content-center flex-wrap">
-        {!loading ? (
-          <div className="flex xl:-mt-16 gap-4 justify-center items-center lg:-mt-14">
-            <div>{weatherIcon}</div>
+      {!loading ? (
+        <div className="flex xl:-mt-16 gap-4 justify-center items-center lg:-mt-14 sm2:flex-col sm2:text-center sm3:flex-col sm3:text-center">
+          <div>{weatherIcon}</div>
+          <div>
             <div>
-              <div>
-                <p style={{ color: "black" }}>
-                  <span className="text-3xl sm3:text-2x ">{weather?.temp}</span>
-                  <span className="text-1xl sm3:text-xl font-extralight mr-3">
-                    C
-                  </span>
-                  <span className="text-2xl sm3:text-xl font-light">
-                    {weather?.description}
-                  </span>
-                </p>
-              </div>
-              <div className="ml-2">
-                <p className="font-thin mt-2" style={{ color: "black" }}>
-                  Stockholm, Sweden
-                </p>
-                <p style={{ color: "black" }}>
-                  <span className="font-thin mr-2.5">
-                    {moment().format("MMMM D YYYY")}
-                  </span>
-                  <span className="mr-2.5">|</span>
-                  <span className="tracking-widest font-extralight">
-                    {moment().format("H:mm a")}
-                  </span>
-                </p>
-              </div>
+              <p style={{ color: "black" }}>
+                <span className="text-3xl sm3:text-2x ">{weather?.temp}</span>
+                <span className="text-1xl sm3:text-xl font-extralight mr-3">
+                  C
+                </span>
+                <span className="text-2xl sm3:text-xl font-light">
+                  {weather?.description}
+                </span>
+              </p>
+            </div>
+            <div className="ml-2">
+              <p className="font-thin mt-2" style={{ color: "black" }}>
+                Stockholm, Sweden
+              </p>
+              <p style={{ color: "black" }}>
+                <span className="font-thin mr-2.5">
+                  {moment().format("MMMM D YYYY")}
+                </span>
+                <span className="mr-2.5">|</span>
+                <span className="tracking-widest font-extralight">
+                  {moment().format("H:mm a")}
+                </span>
+              </p>
             </div>
           </div>
-        ) : (
-          <div className="loaderContainer">
-            <div className="line-2-vertical"></div>
-          </div>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className="loaderContainer">
+          <div className="line-2-vertical"></div>
+        </div>
+      )}
     </div>
   );
 };
