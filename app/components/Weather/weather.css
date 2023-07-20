@@ -1,6 +1,13 @@
+.weather-wrapper {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media (max-width: 920px) {
-  .weather-container {
-    margin-top: 40px;
+  .weather-wrapper {
+    height: 70vh;
   }
 }
 

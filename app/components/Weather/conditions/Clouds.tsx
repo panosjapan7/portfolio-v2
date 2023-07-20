@@ -1,11 +1,14 @@
-import { AiFillCloud } from "react-icons/ai";
-import "./conditions.css";
+import Image from "next/image";
 
 const Clouds: React.FC = () => {
   return (
-    <div className="clouds-container">
-      <AiFillCloud className="clouds-one" />
-      <AiFillCloud className="clouds-two" />
+    <div>
+      <Image
+        src={"/images/new/clouds-new.png"}
+        width={120}
+        height={120}
+        alt="clouds icon"
+      />
     </div>
   );
 };

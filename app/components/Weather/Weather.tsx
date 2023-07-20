@@ -66,29 +66,26 @@ const Weather = () => {
   }, []);
 
   return (
-    <>
-      <div className="weather-container flex justify-center text-center lg:pt-8">
-        {!loading ? (
-          <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
-            <>{weatherIcon}</>
-
+    <div className="weather-wrapper">
+      {!loading ? (
+        <div className="flex xl:-mt-16 gap-4 justify-center items-center lg:-mt-14 sm2:flex-col sm2:text-center sm3:flex-col sm3:text-center">
+          <div>{weatherIcon}</div>
+          <div>
             <div>
               <p style={{ color: "black" }}>
-                <span className="text-4xl sm3:text-2xl mr-0.5 ">
-                  {weather?.temp}
-                </span>
-                <span className="text-2xl sm3:text-xl font-extralight mr-3">
+                <span className="text-3xl sm3:text-2x ">{weather?.temp}</span>
+                <span className="text-1xl sm3:text-xl font-extralight mr-3">
                   C
                 </span>
                 <span className="text-2xl sm3:text-xl font-light">
                   {weather?.description}
                 </span>
               </p>
+            </div>
+            <div className="ml-2">
               <p className="font-thin mt-2" style={{ color: "black" }}>
                 Stockholm, Sweden
               </p>
-            </div>
-            <div className="mt-8">
               <p style={{ color: "black" }}>
                 <span className="font-thin mr-2.5">
                   {moment().format("MMMM D YYYY")}
@@ -100,13 +97,13 @@ const Weather = () => {
               </p>
             </div>
           </div>
-        ) : (
-          <div className="loaderContainer">
-            <div className="line-2-vertical"></div>
-          </div>
-        )}
-      </div>
-    </>
+        </div>
+      ) : (
+        <div className="loaderContainer">
+          <div className="line-2-vertical"></div>
+        </div>
+      )}
+    </div>
   );
 };
 

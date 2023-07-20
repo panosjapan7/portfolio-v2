@@ -1,11 +1,14 @@
-import { AiFillThunderbolt, AiFillCloud } from "react-icons/ai";
-import "./conditions.css";
+import Image from "next/image";
 
 const Thunderstorm: React.FC = () => {
   return (
-    <div className="thunderstorm-container">
-      <AiFillCloud className="thunderstorm-cloud" />
-      <AiFillThunderbolt className="thunderstorm-thunder" />
+    <div>
+      <Image
+        src={"/images/new/thunderstorm-new.png"}
+        width={120}
+        height={120}
+        alt="thunderstorm icon"
+      />
     </div>
   );
 };

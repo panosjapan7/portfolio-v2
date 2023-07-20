@@ -1,10 +1,14 @@
-import "./conditions.css";
-import { CiCloudDrizzle } from "react-icons/ci";
+import Image from "next/image";
 
 const Drizzle: React.FC = () => {
   return (
-    <div className="drizzle-container">
-      <CiCloudDrizzle className="drizzle" />
+    <div>
+      <Image
+        src={"/images/new/drizzle-new.png"}
+        width={120}
+        height={120}
+        alt="drizzle icon"
+      />
     </div>
   );
 };

@@ -1,10 +1,14 @@
-import { BsFillCloudRainHeavyFill } from "react-icons/bs";
-import "./conditions.css";
+import Image from "next/image";
 
 const Rain: React.FC = () => {
   return (
-    <div className="rain-container">
-      <BsFillCloudRainHeavyFill className="rain" />
+    <div>
+      <Image
+        src={"/images/new/rain-new.png"}
+        width={120}
+        height={120}
+        alt="rain icon"
+      />
     </div>
   );
 };
