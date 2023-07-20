@@ -19,7 +19,7 @@ const ProjectPortfolio = () => {
             "The menu in desktop resolutions was built with Framer Motion to simulate the menu of Apple's Mac OS.",
           ]}
           frontend={
-            "Figma, Framer Motion, Next JS, Tailwind, TypeScript, Weather API"
+            "Figma, Framer Motion, Next JS, Tailwind, TypeScript, OpenWeather API"
           }
           github="https://github.com/panosjapan7/portfolio-v2"
         />
