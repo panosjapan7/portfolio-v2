@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from "react";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import { FaHouse, FaUser } from "react-icons/fa6";
 
-const MenuDesktop = ({ isDay }: { isDay: boolean }) => {
+const MenuDesktop = () => {
   const [activePage, setActivePage] = useState(0);
 
   let mouseX = useMotionValue(Infinity);
@@ -36,7 +36,6 @@ const MenuDesktop = ({ isDay }: { isDay: boolean }) => {
             i={i}
             active={activePage === i}
             onClick={() => setActivePage(i)}
-            isDay={isDay}
           />
         ))}
       </motion.div>
@@ -49,13 +48,11 @@ function AppIcon({
   i,
   active,
   onClick,
-  isDay,
 }: {
   mouseX: MotionValue;
   i: number;
   active: boolean;
   onClick: () => void;
-  isDay: boolean;
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
@@ -95,9 +92,7 @@ function AppIcon({
         <div
           style={{
             borderRadius: "50%",
-            border: active
-              ? `2px solid ${isDay ? "#b8b7b7" : "#f0f0f0"}`
-              : "none",
+            border: active ? `2px solid  "#b8b7b7"` : "none",
             padding: 14,
           }}
         >
@@ -105,7 +100,7 @@ function AppIcon({
             style={{
               width: "100%",
               height: "100%",
-              color: isDay ? "#9B9B9B" : "#f0f0f0",
+              color: "#9B9B9B",
             }}
           />
         </div>

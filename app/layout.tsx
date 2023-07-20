@@ -27,35 +27,19 @@ export default function RootLayout({
   moment.locale("en");
   moment.tz.setDefault("Europe/Stockholm");
   const currentHour = moment().format("HH");
-  let isDay = false;
-  if (+currentHour > 6 && +currentHour < 20) {
-    isDay = true;
-  }
-
-  const skyBackground: string = "sunny-day";
-  const backgroundWeatherGradients: string[] = [
-    "linear-gradient(180deg, rgba(196, 208, 232, 0.6) 0%, rgba(232, 218, 205, 0.6) 100%)",
-    "linear-gradient(180deg, rgba(5, 4, 16, 1) 0%, rgba(29, 29, 59, 0.6) 70%)",
-  ];
-  let background = "";
-  if (isDay) {
-    background = backgroundWeatherGradients[0];
-  }
-  if (!isDay) {
-    background = backgroundWeatherGradients[1];
-  }
 
   return (
     <html lang="en">
       <body
         className={inter.className}
         style={{
-          background: background,
+          background:
+            "linear-gradient(180deg, rgba(196, 208, 232, 0.6) 0%, rgba(232, 218, 205, 0.6) 100%)",
           border: "white solid 6px",
           borderRadius: "12px",
         }}
       >
-        <Header isDay={isDay} />
+        <Header />
         <main>
           {children}
 
@@ -69,7 +53,7 @@ export default function RootLayout({
           )} */}
         </main>
         <div className="hidden lg:block">
-          <MenuDesktop isDay={isDay} />
+          <MenuDesktop />
         </div>
       </body>
     </html>

@@ -2,7 +2,7 @@ import React from "react";
 import ProjectItem from "./ProjectItem";
 import { FaTwitter } from "react-icons/fa6";
 
-const ProjectTwitter = ({ isDay }: { isDay: boolean }) => {
+const ProjectTwitter = () => {
   return (
     <div className="relative md3:p-5">
       <ProjectItem
@@ -17,7 +17,6 @@ const ProjectTwitter = ({ isDay }: { isDay: boolean }) => {
         frontend="Bootstrap, CSS, HTML5"
         github="https://github.com/panosjapan7/frontend2-gruppuppgift-twitter"
         link="https://frontend2-gruppuppgift-twitter.vercel.app/"
-        isDay={isDay}
       />
       <FaTwitter
         style={{

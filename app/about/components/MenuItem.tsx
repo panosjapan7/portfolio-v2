@@ -9,7 +9,6 @@ interface MenuItemI {
   menuText: string;
   imageWidth: number;
   imageHeight: number;
-  isDay: boolean;
 }
 const MenuItem = ({
   itemValue,
@@ -20,13 +19,12 @@ const MenuItem = ({
   menuText,
   imageWidth,
   imageHeight,
-  isDay,
 }: MenuItemI) => {
   return (
     <div
-      className={`flex items-center gap-2 mb-4 relative cursor-pointer pt-2 pb-2 pl-3 pr-3 rounded-lg ${
+      className={`flex items-center gap-2 mb-4 relative cursor-pointer pt-2 pb-2 pl-3 pr-3  ${
         selectedTab === itemValue
-          ? "cursor-default " + (isDay ? "bg-slate-100" : "bg-gray-500")
+          ? "cursor-default rounded-lg bg-slate-100"
           : "cursor-pointer"
       }`}
       onClick={() => setSelectedTab(itemValue)}
@@ -39,13 +37,7 @@ const MenuItem = ({
         alt={imageAlt}
       />
 
-      <p
-        className={`text-xs font-medium z-10 ${
-          isDay ? "text-blac" : "text-slate-50"
-        }`}
-      >
-        {menuText}
-      </p>
+      <p className="text-xs font-medium z-10 text-black ">{menuText}</p>
     </div>
   );
 };

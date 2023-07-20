@@ -3,7 +3,7 @@ import Image from "next/image";
 import ProjectItem from "./ProjectItem";
 import "./projectMern.css";
 
-const ProjectMern = ({ isDay }: { isDay: boolean }) => {
+const ProjectMern = () => {
   return (
     <div className="relative md3:p-5">
       <div className="content-wrapper">
@@ -22,7 +22,6 @@ const ProjectMern = ({ isDay }: { isDay: boolean }) => {
           frontend="Firebase Auth, React JS, TypeScript"
           backend="Firebase Auth, MongoDB, Node JS, TypeScript"
           github="https://github.com/panosjapan7/mern-firebase-auth"
-          isDay={isDay}
         />
         <Image
           src="/images/mern-bg.svg"

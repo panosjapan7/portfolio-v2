@@ -18,7 +18,7 @@ const DynamicFaHome = dynamic(
   { ssr: false }
 );
 
-const MenuMobile = ({ isDay }: { isDay: boolean }) => {
+const MenuMobile = () => {
   const [activePage, setActivePage] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -54,10 +54,7 @@ const MenuMobile = ({ isDay }: { isDay: boolean }) => {
               <DynamicPiLinkSimpleBold
                 className="icons"
                 style={{
-                  color:
-                    activePage === 3
-                      ? `${isDay ? "black" : "#f0f0f0"}`
-                      : `${isDay ? "#9b9b9b" : "#c0bfbf"}`,
+                  color: activePage === 3 ? "black" : "#9b9b9b",
                 }}
               />
             </Link>
@@ -70,10 +67,7 @@ const MenuMobile = ({ isDay }: { isDay: boolean }) => {
               <DynamicFaUser
                 className="icons"
                 style={{
-                  color:
-                    activePage === 2
-                      ? `${isDay ? "black" : "#f0f0f0"}`
-                      : `${isDay ? "#9b9b9b" : "#c0bfbf"}`,
+                  color: activePage === 2 ? "black" : "#9b9b9b",
                 }}
               />
             </Link>
@@ -86,10 +80,7 @@ const MenuMobile = ({ isDay }: { isDay: boolean }) => {
               <DynamicFaHome
                 className="icons"
                 style={{
-                  color:
-                    activePage === 1
-                      ? `${isDay ? "black" : "#f0f0f0"}`
-                      : `${isDay ? "#9b9b9b" : "#c0bfbf"}`,
+                  color: activePage === 1 ? "black" : "#9b9b9b",
                 }}
               />
             </Link>
@@ -101,12 +92,12 @@ const MenuMobile = ({ isDay }: { isDay: boolean }) => {
             <label
               className="ms-menu-toggle-lbl"
               htmlFor="ms-menu"
-              style={{ backgroundColor: isDay ? "#d2d2d2" : "#ececec" }}
+              style={{ backgroundColor: "#d2d2d2" }}
             >
               <span className="fa fa-plus">
                 <FaPlus
                   style={{
-                    color: isDay ? "#f5f5f5" : "#9b9b9b",
+                    color: "#f5f5f5",
                   }}
                 />
               </span>

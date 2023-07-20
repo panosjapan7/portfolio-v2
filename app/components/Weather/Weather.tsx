@@ -15,7 +15,7 @@ interface Weather {
   mainCondition: string;
 }
 
-const Weather = ({ isDay }: { isDay: boolean }) => {
+const Weather = () => {
   const weatherApiKey = process.env.WEATHER_API_KEY;
   moment.locale("en");
   moment.tz.setDefault("Europe/Stockholm");
@@ -70,14 +70,10 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
       <div className="weather-container flex justify-center text-center lg:pt-8">
         {!loading ? (
           <div className="flex flex-col items-center xl:-mt-16 lg:-mt-14">
-            {isDay ? (
-              <>{weatherIcon}</>
-            ) : (
-              <div className="moon-container"></div>
-            )}
+            <>{weatherIcon}</>
 
             <div>
-              <p style={{ color: isDay ? "black" : "white" }}>
+              <p style={{ color: "black" }}>
                 <span className="text-4xl sm3:text-2xl mr-0.5 ">
                   {weather?.temp}
                 </span>
@@ -88,15 +84,12 @@ const Weather = ({ isDay }: { isDay: boolean }) => {
                   {weather?.description}
                 </span>
               </p>
-              <p
-                className="font-thin mt-2"
-                style={{ color: isDay ? "black" : "white" }}
-              >
+              <p className="font-thin mt-2" style={{ color: "black" }}>
                 Stockholm, Sweden
               </p>
             </div>
             <div className="mt-8">
-              <p style={{ color: isDay ? "black" : "white" }}>
+              <p style={{ color: "black" }}>
                 <span className="font-thin mr-2.5">
                   {moment().format("MMMM D YYYY")}
                 </span>

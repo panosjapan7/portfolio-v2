@@ -25,10 +25,6 @@ const AboutPage = () => {
   moment.locale("en");
   moment.tz.setDefault("Europe/Stockholm");
   const currentHour = moment().format("HH");
-  let isDay = false;
-  if (+currentHour > 6 && +currentHour < 20) {
-    isDay = true;
-  }
 
   return (
     <>
@@ -36,11 +32,7 @@ const AboutPage = () => {
         <div className="mt-0 pb-5 pl-11 pr-11 justify-center self-center gap-10 lg:mt-0 md:mt-10 sm2:mt-10 sm:mt-10 grid grid-cols-4 md3:hidden">
           <div className="left-column col-span-1">
             <div>
-              <h2
-                className={`font-semibold text-xl mb-2 ${
-                  isDay ? "text-black" : "text-slate-100"
-                } `}
-              >
+              <h2 className="font-semibold text-xl mb-2 text-black">
                 About Me
               </h2>
 
@@ -54,7 +46,6 @@ const AboutPage = () => {
                   menuText="About Me"
                   imageWidth={22}
                   imageHeight={22}
-                  isDay={isDay}
                 />
                 <MenuItem
                   itemValue="tech-skills"
@@ -65,13 +56,11 @@ const AboutPage = () => {
                   menuText="Technical Skills"
                   imageWidth={22}
                   imageHeight={22}
-                  isDay={isDay}
                 />
                 <div
-                  className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3 rounded-lg ${
+                  className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3  ${
                     selectedTab === "experience"
-                      ? "cursor-default " +
-                        (isDay ? "bg-slate-100" : "bg-gray-500")
+                      ? "cursor-default rounded-lg bg-slate-100"
                       : "cursor-pointer"
                   }`}
                   onClick={() => setSelectedTab("experience")}
@@ -84,22 +73,14 @@ const AboutPage = () => {
                       alt="star shape"
                     />
                   </div>
-                  <p
-                    className={`text-xs font-medium z-10 ${
-                      isDay ? "text-blac" : "text-slate-50"
-                    }`}
-                  >
+                  <p className="text-xs font-medium z-10 text-black">
                     Experience
                   </p>
                 </div>
               </div>
             </div>
             <div className="mt-6">
-              <h2
-                className={`font-semibold text-xl mb-2 ${
-                  isDay ? "text-black" : "text-slate-100"
-                } `}
-              >
+              <h2 className="font-semibold text-xl mb-2 text-black">
                 Projects
               </h2>
               <MenuItem
@@ -111,7 +92,6 @@ const AboutPage = () => {
                 menuText="Portfolio Website"
                 imageWidth={22}
                 imageHeight={22}
-                isDay={isDay}
               />
               <MenuItem
                 itemValue="mern"
@@ -122,13 +102,11 @@ const AboutPage = () => {
                 menuText="MERN + Firebase Auth"
                 imageWidth={22}
                 imageHeight={22}
-                isDay={isDay}
               />
               {/* <div
-                className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3 rounded-lg ${
+                className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3  ${
                   selectedTab === "twitter"
-                    ? "cursor-default " +
-                      (isDay ? "bg-slate-100" : "bg-gray-500")
+                    ? "cursor-default bg-slate-100 rounded-lg"
                     : "cursor-pointer"
                 }`}
                 onClick={() => setSelectedTab("twitter")}
@@ -141,23 +119,19 @@ const AboutPage = () => {
                     alt="star shape"
                   />
                 </div>
-                <p
-                  className={`text-xs font-medium z-10 ${
-                    isDay ? "text-blac" : "text-slate-50"
-                  }`}
-                >
+                <p className="text-xs font-medium z-10 text-black">
                   Twitter Feed
                 </p>
               </div> */}
             </div>
           </div>
           <div className="row-span-3 col-span-3">
-            {selectedTab === "about-me" && <AboutMe isDay={isDay} />}
-            {selectedTab === "tech-skills" && <TechnicalSkills isDay={isDay} />}
-            {selectedTab === "experience" && <Experience isDay={isDay} />}
-            {selectedTab === "portfolio" && <ProjectPortfolio isDay={isDay} />}
-            {selectedTab === "mern" && <ProjectMern isDay={isDay} />}
-            {selectedTab === "twitter" && <ProjectTwitter isDay={isDay} />}
+            {selectedTab === "about-me" && <AboutMe />}
+            {selectedTab === "tech-skills" && <TechnicalSkills />}
+            {selectedTab === "experience" && <Experience />}
+            {selectedTab === "portfolio" && <ProjectPortfolio />}
+            {selectedTab === "mern" && <ProjectMern />}
+            {selectedTab === "twitter" && <ProjectTwitter />}
           </div>
         </div>
       </div>
@@ -171,32 +145,21 @@ const AboutPage = () => {
           setSelectedProjectsSuboptionMobile={
             setSelectedProjectsSuboptionMobile
           }
-          isDay={isDay}
         />
         {selectedTabMobile === "about-me" &&
-          selectedAboutSuboptionMobile === "about-me" && (
-            <AboutMe isDay={isDay} />
-          )}
+          selectedAboutSuboptionMobile === "about-me" && <AboutMe />}
         {selectedTabMobile === "about-me" &&
-          selectedAboutSuboptionMobile === "tech-skills" && (
-            <TechnicalSkills isDay={isDay} />
-          )}
+          selectedAboutSuboptionMobile === "tech-skills" && <TechnicalSkills />}
         {selectedTabMobile === "about-me" &&
-          selectedAboutSuboptionMobile === "experience" && (
-            <Experience isDay={isDay} />
-          )}
+          selectedAboutSuboptionMobile === "experience" && <Experience />}
         {selectedTabMobile === "projects" &&
           selectedProjectsSuboptionMobile === "portfolio-website" && (
-            <ProjectPortfolio isDay={isDay} />
+            <ProjectPortfolio />
           )}
         {selectedTabMobile === "projects" &&
-          selectedProjectsSuboptionMobile === "mern" && (
-            <ProjectMern isDay={isDay} />
-          )}
+          selectedProjectsSuboptionMobile === "mern" && <ProjectMern />}
         {selectedTabMobile === "projects" &&
-          selectedProjectsSuboptionMobile === "twitter" && (
-            <ProjectTwitter isDay={isDay} />
-          )}
+          selectedProjectsSuboptionMobile === "twitter" && <ProjectTwitter />}
       </div>
     </>
   );

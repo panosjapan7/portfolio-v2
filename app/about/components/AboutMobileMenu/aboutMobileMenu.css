@@ -19,6 +19,7 @@
   font-weight: 500;
   cursor: default;
   animation: activateOption 0.2s ease;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @keyframes activateOption {
@@ -57,4 +58,5 @@
   font-weight: 500;
   cursor: default;
   border-radius: 50px;
+  background: rgba(255, 255, 255, 0.4);
 }
