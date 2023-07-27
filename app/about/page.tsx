@@ -108,11 +108,11 @@ const AboutPage = () => {
                 itemValue="agroktima-mitsakis"
                 selectedTab={selectedTab}
                 setSelectedTab={setSelectedTab}
-                image="mern-icon.svg"
-                imageAlt="mitsakis icon"
+                image="mitsakis-icon-white.png"
+                imageAlt="mitsakis logo"
                 menuText="Agroktima Mitsakis"
                 imageWidth={22}
-                imageHeight={22}
+                imageHeight={18}
               />
               {/* <div
                 className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3  ${
