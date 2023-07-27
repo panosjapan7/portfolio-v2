@@ -136,6 +136,21 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               MERN + Firebase Auth
             </h3>
           </div>
+
+          <div
+            className={`sub-option-container ${
+              selectedProjectsSuboptionMobile === "agroktima-mitsakis"
+                ? "sub-option-active"
+                : ""
+            }`}
+            onClick={() =>
+              setSelectedProjectsSuboptionMobile("agroktima-mitsakis")
+            }
+          >
+            <h3 className="text-sm" style={{ color: "#9b9b9b" }}>
+              Agroktima Mitsakis
+            </h3>
+          </div>
           {/* <div
             className={`sub-option-container ${
               selectedProjectsSuboptionMobile === "twitter"

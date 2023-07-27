@@ -13,6 +13,7 @@ import ProjectPortfolio from "./components/ProjectPortfolio";
 import ProjectMern from "./components/ProjectMern";
 import ProjectTwitter from "./components/ProjectTwitter";
 import AboutMobileMenu from "./components/AboutMobileMenu/AboutMobileMenu";
+import ProjectMitsakis from "./components/ProjectMitsakis";
 
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
@@ -103,6 +104,16 @@ const AboutPage = () => {
                 imageWidth={22}
                 imageHeight={22}
               />
+              <MenuItem
+                itemValue="agroktima-mitsakis"
+                selectedTab={selectedTab}
+                setSelectedTab={setSelectedTab}
+                image="mern-icon.svg"
+                imageAlt="mitsakis icon"
+                menuText="Agroktima Mitsakis"
+                imageWidth={22}
+                imageHeight={22}
+              />
               {/* <div
                 className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3  ${
                   selectedTab === "twitter"
@@ -131,6 +142,7 @@ const AboutPage = () => {
             {selectedTab === "experience" && <Experience />}
             {selectedTab === "portfolio" && <ProjectPortfolio />}
             {selectedTab === "mern" && <ProjectMern />}
+            {selectedTab === "agroktima-mitsakis" && <ProjectMitsakis />}
             {selectedTab === "twitter" && <ProjectTwitter />}
           </div>
         </div>
@@ -159,7 +171,11 @@ const AboutPage = () => {
         {selectedTabMobile === "projects" &&
           selectedProjectsSuboptionMobile === "mern" && <ProjectMern />}
         {selectedTabMobile === "projects" &&
-          selectedProjectsSuboptionMobile === "twitter" && <ProjectTwitter />}
+          selectedProjectsSuboptionMobile === "agroktima-mitsakis" && (
+            <ProjectMitsakis />
+          )}
+        {/* {selectedTabMobile === "projects" &&
+          selectedProjectsSuboptionMobile === "twitter" && <ProjectTwitter />} */}
       </div>
     </>
   );
