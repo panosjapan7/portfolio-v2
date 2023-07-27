@@ -15,6 +15,7 @@ const ProjectMitsakis = () => {
             "Mobile Drawer Menu with animation.",
             "Image galleries.",
             "Scroll Back To Top button",
+            "No libraries. Just vanilla JavaScript.",
           ]}
           frontend="CSS, HTML5, JavaScript"
           github="https://github.com/panosjapan7/agroktima-mitsakis"
