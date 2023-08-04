@@ -17,7 +17,7 @@ const Experience = () => {
           <div className="md3:pr-3 pr-3 pl-2 mb-6">
             <h3 className="font-medium text-lg text-black">Moveat</h3>
             <p className="text-sm tracking-wide text-gray-600">
-              Dec. 2022 - May 2023
+              Dec. 2022 - April 2023
             </p>
             <p className="italic text-sm mb-3 text-gray-600">
               Frontend Web Developer
@@ -67,7 +67,7 @@ const Experience = () => {
               Redmind internship
             </h3>
             <p className="text-sm tracking-wide text-gray-600">
-              Nov. 2022 - May 2023
+              Nov. 2022 - April 2023
             </p>
             <p className="italic text-sm mb-3 text-gray-600">
               Frontend Web Developer
