@@ -68,16 +68,16 @@ const Weather = () => {
   return (
     <div className="weather-wrapper">
       {!loading ? (
-        <div className="flex xl:-mt-16 gap-4 justify-center items-center lg:-mt-14 sm2:flex-col sm2:text-center sm3:flex-col sm3:text-center">
-          <div>{weatherIcon}</div>
+        <div className="flex xl:-mt-16 gap-4 justify-center items-center lg:-mt-14 sm2:flex-col sm2:text-center sm3:flex-col sm3:text-center weather-card">
+          <div className="weather-icon">{weatherIcon}</div>
           <div>
             <div>
               <p style={{ color: "black" }}>
-                <span className="text-3xl sm3:text-2x ">{weather?.temp}</span>
-                <span className="text-1xl sm3:text-xl font-extralight mr-3">
+                <span className="text-2xl sm3:text-2x ">{weather?.temp}</span>
+                <span className="text-md sm3:text-md font-extralight mr-3">
                   C
                 </span>
-                <span className="text-2xl sm3:text-xl font-light">
+                <span className="text-lg sm3:text-lg font-light">
                   {weather?.description}
                 </span>
               </p>
