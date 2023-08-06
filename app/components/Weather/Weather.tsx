@@ -19,7 +19,7 @@ interface Weather {
 }
 
 const Weather = () => {
-  const weatherApiKey = process.env.WEATHER_API_KEY;
+  const weatherApiKey = process.env.NEXT_WEATHER_API_KEY;
   moment.locale("en");
   moment.tz.setDefault("Europe/Stockholm");
 
@@ -29,13 +29,12 @@ const Weather = () => {
 
   const fetchWeather = async () => {
     const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=59.32&lon=18.06&appid=3d9017dc9dd85e435a6750e8872239c4&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=59.32&lon=18.06&appid=${weatherApiKey}&units=metric`
     );
     const data = await res.json();
     let capitalizedDescription = "";
 
     if (data) {
-      console.log({ data });
       capitalizedDescription = data.weather[0].description
         .split(" ")
         .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
