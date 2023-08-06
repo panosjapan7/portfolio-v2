@@ -72,7 +72,7 @@ function AppIcon({
   const handleClick = () => {
     onClick();
   };
-  console.log({ active });
+
   return (
     <motion.div
       ref={ref}
