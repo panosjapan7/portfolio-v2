@@ -11,7 +11,6 @@ import TechnicalSkills from "./components/TechnicalSkills";
 import Experience from "./components/Experience";
 import ProjectPortfolio from "./components/ProjectPortfolio";
 import ProjectMern from "./components/ProjectMern";
-import ProjectTwitter from "./components/ProjectTwitter";
 import AboutMobileMenu from "./components/AboutMobileMenu/AboutMobileMenu";
 import ProjectMitsakis from "./components/ProjectMitsakis";
 import ProjectAdidas from "./components/ProjectAdidas";
@@ -125,26 +124,6 @@ const AboutPage = () => {
                 imageWidth={22}
                 imageHeight={18}
               />
-              {/* <div
-                className={`flex items-center gap-2 mb-5 relative cursor-pointer pt-2 pb-2 pl-3  ${
-                  selectedTab === "twitter"
-                    ? "cursor-default bg-slate-100 rounded-lg"
-                    : "cursor-pointer"
-                }`}
-                onClick={() => setSelectedTab("twitter")}
-              >
-                <div className="exp-container z-10">
-                  <Image
-                    src="/images/twitter-icon.png"
-                    width={12}
-                    height={12}
-                    alt="star shape"
-                  />
-                </div>
-                <p className="text-xs font-medium z-10 text-black">
-                  Twitter Feed
-                </p>
-              </div> */}
             </div>
           </div>
           <div className="row-span-3 col-span-3">
@@ -155,7 +134,6 @@ const AboutPage = () => {
             {selectedTab === "portfolio" && <ProjectPortfolio />}
             {selectedTab === "mern" && <ProjectMern />}
             {selectedTab === "agroktima-mitsakis" && <ProjectMitsakis />}
-            {selectedTab === "twitter" && <ProjectTwitter />}
           </div>
         </div>
       </div>
@@ -190,8 +168,6 @@ const AboutPage = () => {
           selectedProjectsSuboptionMobile === "agroktima-mitsakis" && (
             <ProjectMitsakis />
           )}
-        {/* {selectedTabMobile === "projects" &&
-          selectedProjectsSuboptionMobile === "twitter" && <ProjectTwitter />} */}
       </div>
     </>
   );
