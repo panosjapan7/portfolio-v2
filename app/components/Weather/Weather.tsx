@@ -33,7 +33,7 @@ const Weather = () => {
 
   const fetchWeather = async () => {
     const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=59.32&lon=18.06&appid=${weatherApiKey}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=59.32&lon=18.06&appid=3d9017dc9dd85e435a6750e8872239c4&units=metric`
     );
     const data = await res.json();
     let capitalizedDescription = "";
