@@ -1,9 +1,88 @@
 .weather-wrapper {
   height: 60vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 40px;
+}
+@media (min-width: 251px) and (max-width: 680px) {
+  .weather-wrapper {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 250px) {
+  .weather-wrapper {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.3);
+  border: 10px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  position: relative;
+  padding: 25px;
+  max-width: 270px;
+  min-height: 200px;
+}
+.card-icon {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 80px;
+  height: auto;
+}
+@media (min-width: 361px) and (max-width: 420px) {
+  .weather-wrapper {
+    margin-top: 2vh;
+  }
+  .card-icon {
+    top: -30px;
+    left: -30px;
+    width: 80px;
+  }
+}
+@media (min-width: 20px) and (max-width: 360px) {
+  .weather-wrapper {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1vh;
+  }
+  .weather-card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-icon {
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    position: relative;
+  }
 }
 
 @media (max-width: 920px) {
