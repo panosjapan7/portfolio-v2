@@ -14,6 +14,7 @@ import ProjectMern from "./components/ProjectMern";
 import ProjectTwitter from "./components/ProjectTwitter";
 import AboutMobileMenu from "./components/AboutMobileMenu/AboutMobileMenu";
 import ProjectMitsakis from "./components/ProjectMitsakis";
+import ProjectAdidas from "./components/ProjectAdidas";
 
 const AboutPage = () => {
   const [selectedTab, setSelectedTab] = useState("about-me");
@@ -85,6 +86,16 @@ const AboutPage = () => {
                 Projects
               </h2>
               <MenuItem
+                itemValue="adidas"
+                selectedTab={selectedTab}
+                setSelectedTab={setSelectedTab}
+                image="adidas-icon.svg"
+                imageAlt="Profile icon"
+                menuText="adidas Landing Page"
+                imageWidth={24}
+                imageHeight={24}
+              />
+              <MenuItem
                 itemValue="portfolio"
                 selectedTab={selectedTab}
                 setSelectedTab={setSelectedTab}
@@ -140,6 +151,7 @@ const AboutPage = () => {
             {selectedTab === "about-me" && <AboutMe />}
             {selectedTab === "tech-skills" && <TechnicalSkills />}
             {selectedTab === "experience" && <Experience />}
+            {selectedTab === "adidas" && <ProjectAdidas />}
             {selectedTab === "portfolio" && <ProjectPortfolio />}
             {selectedTab === "mern" && <ProjectMern />}
             {selectedTab === "agroktima-mitsakis" && <ProjectMitsakis />}
@@ -158,12 +170,16 @@ const AboutPage = () => {
             setSelectedProjectsSuboptionMobile
           }
         />
+
         {selectedTabMobile === "about-me" &&
           selectedAboutSuboptionMobile === "about-me" && <AboutMe />}
         {selectedTabMobile === "about-me" &&
           selectedAboutSuboptionMobile === "tech-skills" && <TechnicalSkills />}
         {selectedTabMobile === "about-me" &&
           selectedAboutSuboptionMobile === "experience" && <Experience />}
+
+        {selectedTabMobile === "projects" &&
+          selectedProjectsSuboptionMobile === "adidas" && <ProjectAdidas />}
         {selectedTabMobile === "projects" &&
           selectedProjectsSuboptionMobile === "portfolio-website" && (
             <ProjectPortfolio />
