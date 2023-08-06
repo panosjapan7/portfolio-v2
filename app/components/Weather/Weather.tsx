@@ -1,6 +1,9 @@
+import { useEffect, useState } from "react";
 import moment from "moment";
 import "moment-timezone";
-import { useEffect, useState } from "react";
+import Image from "next/image";
+import { PiLinkSimpleBold } from "react-icons/pi";
+import { FaGithub } from "react-icons/fa6";
 import "./weather.css";
 import Thunderstorm from "./conditions/Thunderstorm";
 import Clear from "./conditions/Clear";
@@ -68,36 +71,95 @@ const Weather = () => {
   return (
     <div className="weather-wrapper">
       {!loading ? (
-        <div className="flex xl:-mt-16 gap-4 justify-center items-center lg:-mt-14 sm2:flex-col sm2:text-center sm3:flex-col sm3:text-center weather-card">
-          <div className="weather-icon">{weatherIcon}</div>
-          <div>
+        <>
+          <div className="flex xl:-mt-16 gap-4 justify-center items-center lg:-mt-14 sm2:flex-col sm2:text-center sm3:flex-col sm3:text-center weather-card">
+            <div className="card-icon">{weatherIcon}</div>
             <div>
-              <p style={{ color: "black" }}>
-                <span className="text-2xl sm3:text-2x ">{weather?.temp}</span>
-                <span className="text-md sm3:text-md font-extralight mr-3">
-                  C
-                </span>
-                <span className="text-lg sm3:text-lg font-light">
-                  {weather?.description}
-                </span>
-              </p>
-            </div>
-            <div className="ml-2">
-              <p className="font-thin mt-2" style={{ color: "black" }}>
-                Stockholm, Sweden
-              </p>
-              <p style={{ color: "black" }}>
-                <span className="font-thin mr-2.5">
-                  {moment().format("MMMM D YYYY")}
-                </span>
-                <span className="mr-2.5">|</span>
-                <span className="tracking-widest font-extralight">
-                  {moment().format("H:mm a")}
-                </span>
-              </p>
+              <p className="text-sm font-semibold">My Location</p>
+              <div>
+                <p className="" style={{ color: "black" }}>
+                  Stockholm, Sweden
+                </p>
+              </div>
+              <div className="mt-2">
+                <p style={{ color: "black" }}>
+                  <span className="sm3:text-2x ">{weather?.temp}</span>
+                  <span className="text-xs sm3:text-md font-extralight mr-3">
+                    {" "}
+                    C
+                  </span>
+                  <span className="text-sm sm3:text-lg font-light">
+                    {weather?.description}
+                  </span>
+                </p>
+                <p className="text-sm">
+                  <span className="font-thin mr-2.5">
+                    {moment().format("MMMM D YYYY")}
+                  </span>
+                  <span className="mr-2.5">|</span>
+                  <span className="tracking-widest font-extralight">
+                    {moment().format("H:mm a")}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+          <div className="flex flex-col xl:-mt-16 justify-center lg:-mt-14 sm2:flex-col sm2:text-center sm3:flex-col sm3:text-center weather-card">
+            <div className="card-icon">
+              <Image
+                src="/images/project-adidas-icon.svg"
+                width={90}
+                height={90}
+                alt="star shape"
+              />
+            </div>
+            <div>
+              <p className="text-sm font-semibold">My Latest Project</p>
+            </div>
+            <div>
+              <div>
+                <p>adidas Landing Page</p>
+              </div>
+              <div className="mt-2">
+                <p className="font-thin italic text-sm">
+                  CSS, Framer Motion, GSAP, React, TypeScript
+                </p>
+              </div>
+              <div className="flex gap-5 mt-3 sm2:justify-center sm3:justify-center">
+                <a
+                  href="https://github.com/panosjapan7/adidas-project"
+                  target="_blank"
+                  className="text-sm hover:underline-offset-2 hover:underline"
+                >
+                  <div className="flex gap-1 items-center ">
+                    <FaGithub
+                      width={20}
+                      height={20}
+                      className="text-slate-800"
+                    />
+                    <p className="font-medium text-slate-800">GitHub</p>
+                  </div>
+                </a>
+                <a
+                  href="https://adidas-project.vercel.app"
+                  target="_blank"
+                  className="text-sm hover:underline-offset-2 hover:underline"
+                >
+                  <div className="flex gap-1 items-center">
+                    <PiLinkSimpleBold
+                      className="text-slate-800"
+                      style={{
+                        width: 17,
+                        height: 17,
+                      }}
+                    />
+                    <p className="font-medium text-slate-800">Link</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </>
       ) : (
         <div className="loaderContainer">
           <div className="line-2-vertical"></div>
