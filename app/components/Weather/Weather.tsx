@@ -19,6 +19,10 @@ interface Weather {
 }
 
 const Weather = () => {
+  if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config();
+  }
+
   const weatherApiKey = process.env.NEXT_WEATHER_API_KEY;
   moment.locale("en");
   moment.tz.setDefault("Europe/Stockholm");
