@@ -112,6 +112,18 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
         <div className="sub-options-container">
           <div
             className={`sub-option-container ${
+              selectedProjectsSuboptionMobile === "adidas"
+                ? "sub-option-active"
+                : ""
+            }`}
+            onClick={() => setSelectedProjectsSuboptionMobile("adidas")}
+          >
+            <h3 className="text-sm" style={{ color: "#9b9b9b" }}>
+              adidas Landing Page
+            </h3>
+          </div>
+          <div
+            className={`sub-option-container ${
               selectedProjectsSuboptionMobile === "portfolio-website"
                 ? "sub-option-active"
                 : ""
@@ -151,18 +163,6 @@ const AboutMobileMenu: React.FC<MobileMenu> = ({
               Agroktima Mitsakis
             </h3>
           </div>
-          {/* <div
-            className={`sub-option-container ${
-              selectedProjectsSuboptionMobile === "twitter"
-                ? "sub-option-active"
-                : ""
-            }`}
-            onClick={() => setSelectedProjectsSuboptionMobile("twitter")}
-          >
-            <h3 className="text-sm" style={{ color: "#9b9b9b" }}>
-              Twitter Feed
-            </h3>
-          </div> */}
         </div>
       )}
     </div>
