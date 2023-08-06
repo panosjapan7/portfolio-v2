@@ -23,9 +23,9 @@ top: 400px; */
 }
 .weather-icon {
   position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 100px;
+  top: -45px;
+  left: -45px;
+  width: 90px;
   height: auto;
 }
 @media (min-width: 361px) and (max-width: 420px) {
