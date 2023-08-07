@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ![adidas ultraboost website](public/images/readme-images/home-desktop.jpg)
 
-## Getting Started
+</br>
 
-First, run the development server:
+# Personal Portfolio
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+My portfolio website was built using _Next.js 13_, _Tailwind CSS_, and _TypeScript_. It consists of three sections, **Home** page, **About** page and **Links** page and it's responsive.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Here is a working live demo I've hosted on Vercel: https://portfolio-v2-lyart-sigma.vercel.app/
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+</br>
 
-## Learn More
+## Site
 
-To learn more about Next.js, take a look at the following resources:
+### Home Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I wanted to make use of a 3rd-party API so I chose _OpenWeather's API_ to show the weather of the location I live in. The second card shows the latest project I've built.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![](public/images/readme-images/home-screen.jpg)
 
-## Deploy on Vercel
+### About Page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In this page I present all the information that's relevant to my career as a software developer. From my education, to the tech stack I'm familiar with as well as information about some of the projects I've built.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![](public/images/readme-images/about-screen.jpg)
+
+### Links Page
+
+It contains 3 links (_CV pdf_, _GitHub_, _LinkedIn_) and I've built a carousel that the user can drag/swipe to click on a link. The carousel is built with pure _CSS_.
+
+![](public/images/readme-images/links-screen.jpg)
+
+</br>
+
+## Interactivity
+
+### Desktop Menu
+
+The desktop menu works similarly to Mac OS's menu and is powered by _Framer Motion_.
+
+![](public/images/readme-images/interactivity-desktop-menu.gif)
+
+### Mobile Menu
+
+A hamburger menu is used on mobile views for navigation.
+
+<img src="public/images/readme-images/interactivity-mobile-menu.gif" alt="drawing" height="500"/>
+
+### Links Carousel
+
+The user drags/swipes sideways to go to the next slide of the carousel.
+
+![](public/images/readme-images/interactivity-links-desktop.gif)
+
+<img src="public/images/readme-images/interactivity-links-mobile.gif" alt="drawing" height="500"/>
+
+</br>
+
+## Built with
+
+- **CSS**
+- **Framer Motion**
+- **Next.js**
+- **OpenWeather API**
+- **Tailwind CSS**
+- **TypeScript**
