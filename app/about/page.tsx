@@ -21,7 +21,7 @@ const AboutPage = () => {
   const [selectedAboutSuboptionMobile, setSelectedAboutSuboptionMobile] =
     useState("about-me");
   const [selectedProjectsSuboptionMobile, setSelectedProjectsSuboptionMobile] =
-    useState("portfolio-website");
+    useState("adidas");
 
   moment.locale("en");
   moment.tz.setDefault("Europe/Stockholm");
