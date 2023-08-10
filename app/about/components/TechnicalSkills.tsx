@@ -168,7 +168,7 @@ const TechnicalSkills = () => {
               alt="javascript icon"
               width={14}
               height={14}
-              skill="JavaSciprt"
+              skill="JavaScript"
             />
             <TechnicalSkill
               source="/images/node-icon.svg"
