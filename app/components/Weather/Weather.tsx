@@ -32,7 +32,7 @@ const Weather = () => {
 
   const fetchWeather = async () => {
     const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=59.32&lon=18.06&appid=${weatherApiKey}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=58.59&lon=16.18&appid=${weatherApiKey}&units=metric`
     );
     const data = await res.json();
     let capitalizedDescription = "";
@@ -80,7 +80,7 @@ const Weather = () => {
               <p className="text-sm font-semibold">My Location</p>
               <div>
                 <p className="" style={{ color: "black" }}>
-                  Stockholm, Sweden
+                  Norrköping, Sweden
                 </p>
               </div>
               <div className="mt-2">
